@@ -17,32 +17,32 @@ class MoreInfo extends Component {
         <DescriptionList>
           <DescriptionListItemTitle>{translate('HomePage')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://prowlarr.com/">prowlarr.com</Link>
+            <Link to="https://fetcharr.com/">fetcharr.com</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('Wiki')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://wiki.servarr.com/prowlarr">wiki.servarr.com/prowlarr</Link>
+            <Link to="https://wiki.servarr.com/fetcharr">wiki.servarr.com/fetcharr</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('Reddit')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://reddit.com/r/prowlarr">r/prowlarr</Link>
+            <Link to="https://reddit.com/r/fetcharr">r/fetcharr</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('Discord')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://prowlarr.com/discord">prowlarr.com/discord</Link>
+            <Link to="https://fetcharr.com/discord">fetcharr.com/discord</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('Source')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://github.com/Prowlarr/Prowlarr/">github.com/Prowlarr/Prowlarr</Link>
+            <Link to="https://github.com/Fetcharr/Fetcharr/">github.com/Fetcharr/Fetcharr</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('FeatureRequests')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://github.com/Prowlarr/Prowlarr/issues">github.com/Prowlarr/Prowlarr/issues</Link>
+            <Link to="https://github.com/Fetcharr/Fetcharr/issues">github.com/Fetcharr/Fetcharr/issues</Link>
           </DescriptionListItemDescription>
 
         </DescriptionList>

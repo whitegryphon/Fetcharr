@@ -121,12 +121,12 @@ namespace NzbDrone.Core.Download.Clients.Deluge
                     case WebExceptionStatus.ConnectionClosed:
                         return new NzbDroneValidationFailure("UseSsl", "Verify SSL settings")
                         {
-                            DetailedDescription = "Please verify your SSL configuration on both Deluge and Prowlarr."
+                            DetailedDescription = "Please verify your SSL configuration on both Deluge and Fetcharr."
                         };
                     case WebExceptionStatus.SecureChannelFailure:
                         return new NzbDroneValidationFailure("UseSsl", "Unable to connect through SSL")
                         {
-                            DetailedDescription = "Prowlarr is unable to connect to Deluge using SSL. This problem could be computer related. Please try to configure both Prowlarr and Deluge to not use SSL."
+                            DetailedDescription = "Fetcharr is unable to connect to Deluge using SSL. This problem could be computer related. Please try to configure both Fetcharr and Deluge to not use SSL."
                         };
                     default:
                         return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
@@ -178,7 +178,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
                     {
                         return new NzbDroneValidationFailure("Category", "Configuration of label failed")
                         {
-                            DetailedDescription = "Prowlarr was unable to add the label to Deluge."
+                            DetailedDescription = "Fetcharr was unable to add the label to Deluge."
                         };
                     }
                 }

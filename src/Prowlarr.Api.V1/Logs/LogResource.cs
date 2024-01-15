@@ -1,8 +1,8 @@
 using System;
 using NzbDrone.Core.Instrumentation;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Logs
+namespace Fetcharr.Api.V1.Logs
 {
     public class LogResource : RestResource
     {

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using NzbDrone.Common.Reflection;
 using NzbDrone.Core.ThingiProvider;
-using Prowlarr.Http.ClientSchema;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.ClientSchema;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1
+namespace Fetcharr.Api.V1
 {
     public class ProviderResource<T> : RestResource
     {
@@ -38,9 +38,9 @@ namespace Prowlarr.Api.V1
                 Tags = definition.Tags,
                 Fields = SchemaBuilder.ToSchema(definition.Settings),
 
-                //prowlarr/supported#{0} is an disambagation page. the # should be a header on the page with appropiate details/link
+                //fetcharr/supported#{0} is an disambagation page. the # should be a header on the page with appropiate details/link
                 // note: indexers get a different link
-                InfoLink = string.Format("https://wiki.servarr.com/prowlarr/supported#{0}",
+                InfoLink = string.Format("https://wiki.servarr.com/fetcharr/supported#{0}",
                     definition.Implementation.ToLower().Replace(' ', '-'))
             };
         }

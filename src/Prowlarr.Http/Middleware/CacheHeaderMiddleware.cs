@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Middleware
+namespace Fetcharr.Http.Middleware
 {
     public class CacheHeaderMiddleware
     {

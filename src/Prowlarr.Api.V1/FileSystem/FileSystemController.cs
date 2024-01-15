@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Disk;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.FileSystem
+namespace Fetcharr.Api.V1.FileSystem
 {
     [V1ApiController]
     public class FileSystemController : Controller

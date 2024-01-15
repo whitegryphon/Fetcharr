@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Prowlarr.Http.Frontend.Mappers
+namespace Fetcharr.Http.Frontend.Mappers
 {
     public interface IMapHttpRequestsToDisk
     {

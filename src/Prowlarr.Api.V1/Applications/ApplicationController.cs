@@ -1,7 +1,7 @@
 using NzbDrone.Core.Applications;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Applications
+namespace Fetcharr.Api.V1.Applications
 {
     [V1ApiController("applications")]
     public class ApplicationController : ProviderControllerBase<ApplicationResource, ApplicationBulkResource, IApplication, ApplicationDefinition>

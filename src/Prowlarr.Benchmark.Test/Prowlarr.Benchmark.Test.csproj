@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Core\Prowlarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Fetcharr.Core.csproj" />
   </ItemGroup>
 
 </Project>

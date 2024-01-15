@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Middleware
+namespace Fetcharr.Http.Middleware
 {
     public class VersionMiddleware
     {

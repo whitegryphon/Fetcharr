@@ -6,7 +6,7 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Analytics;
 using NzbDrone.Core.Configuration;
 
-namespace Prowlarr.Http.Frontend
+namespace Fetcharr.Http.Frontend
 {
     [Authorize(Policy = "UI")]
     [ApiController]

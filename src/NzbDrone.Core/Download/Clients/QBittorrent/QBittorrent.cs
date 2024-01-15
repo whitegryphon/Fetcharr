@@ -288,7 +288,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                     {
                         return new NzbDroneValidationFailure(string.Empty, "Configuration of label failed")
                         {
-                            DetailedDescription = "Prowlarr was unable to add the label to qBittorrent."
+                            DetailedDescription = "Fetcharr was unable to add the label to qBittorrent."
                         };
                     }
                 }
@@ -303,7 +303,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 {
                     return new NzbDroneValidationFailure("Category", "Configuration of label failed")
                     {
-                        DetailedDescription = "Prowlarr was unable to add the label to qBittorrent."
+                        DetailedDescription = "Fetcharr was unable to add the label to qBittorrent."
                     };
                 }
             }

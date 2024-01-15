@@ -76,9 +76,9 @@ function IndexerIndexRow(props: IndexerIndexRowProps) {
       ?.value ?? undefined;
 
   const rssUrl = `${window.location.origin}${
-    window.Prowlarr.urlBase
+    window.Fetcharr.urlBase
   }/${id}/api?apikey=${encodeURIComponent(
-    window.Prowlarr.apiKey
+    window.Fetcharr.apiKey
   )}&extended=1&t=search`;
 
   const [isEditIndexerModalOpen, setIsEditIndexerModalOpen] = useState(false);

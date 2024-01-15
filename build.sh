@@ -17,11 +17,11 @@ ProgressEnd()
 
 UpdateVersionNumber()
 {
-    if [ "$PROWLARRVERSION" != "" ]; then
+    if [ "$FETCHARRVERSION" != "" ]; then
         echo "Updating Version Info"
-        sed -i'' -e "s/<AssemblyVersion>[0-9.*]\+<\/AssemblyVersion>/<AssemblyVersion>$PROWLARRVERSION<\/AssemblyVersion>/g" src/Directory.Build.props
+        sed -i'' -e "s/<AssemblyVersion>[0-9.*]\+<\/AssemblyVersion>/<AssemblyVersion>$FETCHARRVERSION<\/AssemblyVersion>/g" src/Directory.Build.props
         sed -i'' -e "s/<AssemblyConfiguration>[\$()A-Za-z-]\+<\/AssemblyConfiguration>/<AssemblyConfiguration>${BUILD_SOURCEBRANCHNAME}<\/AssemblyConfiguration>/g" src/Directory.Build.props
-        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$PROWLARRVERSION<\/string>/g" distribution/osx/Prowlarr.app/Contents/Info.plist
+        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$FETCHARRVERSION<\/string>/g" distribution/osx/Fetcharr.app/Contents/Info.plist
     fi
 }
 
@@ -66,7 +66,7 @@ Build()
     rm -rf $outputFolder
     rm -rf $testPackageFolder
 
-    slnFile=src/Prowlarr.sln
+    slnFile=src/Fetcharr.sln
 
     if [ $os = "windows" ]; then
         platform=Windows
@@ -110,7 +110,7 @@ PackageFiles()
     rm -rf $folder
     mkdir -p $folder
     cp -r $outputFolder/$framework/$runtime/publish/* $folder
-    cp -r $outputFolder/Prowlarr.Update/$framework/$runtime/publish $folder/Prowlarr.Update
+    cp -r $outputFolder/Fetcharr.Update/$framework/$runtime/publish $folder/Fetcharr.Update
     cp -r $outputFolder/UI $folder
 
     echo "Adding LICENSE"
@@ -124,7 +124,7 @@ PackageLinux()
 
     ProgressStart "Creating $runtime Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Prowlarr
+    local folder=$artifactsFolder/$runtime/$framework/Fetcharr
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -132,14 +132,14 @@ PackageLinux()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Prowlarr.Windows"
-    rm $folder/Prowlarr.Windows.*
+    echo "Removing Fetcharr.Windows"
+    rm $folder/Fetcharr.Windows.*
 
-    echo "Adding Prowlarr.Mono to UpdatePackage"
-    cp $folder/Prowlarr.Mono.* $folder/Prowlarr.Update
+    echo "Adding Fetcharr.Mono to UpdatePackage"
+    cp $folder/Fetcharr.Mono.* $folder/Fetcharr.Update
     if [ "$framework" = "net6.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Prowlarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Prowlarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Fetcharr.Update
+        cp $folder/libMonoPosixHelper.* $folder/Fetcharr.Update
     fi
 
     ProgressEnd "Creating $runtime Package for $framework"
@@ -152,7 +152,7 @@ PackageMacOS()
     
     ProgressStart "Creating MacOS Package for $framework $runtime"
 
-    local folder=$artifactsFolder/$runtime/$framework/Prowlarr
+    local folder=$artifactsFolder/$runtime/$framework/Fetcharr
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -160,14 +160,14 @@ PackageMacOS()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Prowlarr.Windows"
-    rm $folder/Prowlarr.Windows.*
+    echo "Removing Fetcharr.Windows"
+    rm $folder/Fetcharr.Windows.*
 
-    echo "Adding Prowlarr.Mono to UpdatePackage"
-    cp $folder/Prowlarr.Mono.* $folder/Prowlarr.Update
+    echo "Adding Fetcharr.Mono to UpdatePackage"
+    cp $folder/Fetcharr.Mono.* $folder/Fetcharr.Update
     if [ "$framework" = "net6.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Prowlarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Prowlarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Fetcharr.Update
+        cp $folder/libMonoPosixHelper.* $folder/Fetcharr.Update
     fi
 
     ProgressEnd 'Creating MacOS Package'
@@ -184,14 +184,14 @@ PackageMacOSApp()
 
     rm -rf $folder
     mkdir -p $folder
-    cp -r distribution/osx/Prowlarr.app $folder
-    mkdir -p $folder/Prowlarr.app/Contents/MacOS
+    cp -r distribution/osx/Fetcharr.app $folder
+    mkdir -p $folder/Fetcharr.app/Contents/MacOS
 
     echo "Copying Binaries"
-    cp -r $artifactsFolder/$runtime/$framework/Prowlarr/* $folder/Prowlarr.app/Contents/MacOS
+    cp -r $artifactsFolder/$runtime/$framework/Fetcharr/* $folder/Fetcharr.app/Contents/MacOS
 
     echo "Removing Update Folder"
-    rm -r $folder/Prowlarr.app/Contents/MacOS/Prowlarr.Update
+    rm -r $folder/Fetcharr.app/Contents/MacOS/Fetcharr.Update
 
     ProgressEnd 'Creating macOS App Package'
 }
@@ -203,18 +203,18 @@ PackageWindows()
     
     ProgressStart "Creating Windows Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Prowlarr
+    local folder=$artifactsFolder/$runtime/$framework/Fetcharr
     
     PackageFiles "$folder" "$framework" "$runtime"
     cp -r $outputFolder/$framework-windows/$runtime/publish/* $folder
 
-    echo "Removing Prowlarr.Mono"
-    rm -f $folder/Prowlarr.Mono.*
+    echo "Removing Fetcharr.Mono"
+    rm -f $folder/Fetcharr.Mono.*
     rm -f $folder/Mono.Posix.NETStandard.*
     rm -f $folder/libMonoPosixHelper.*
 
-    echo "Adding Prowlarr.Windows to UpdatePackage"
-    cp $folder/Prowlarr.Windows.* $folder/Prowlarr.Update
+    echo "Adding Fetcharr.Windows to UpdatePackage"
+    cp $folder/Fetcharr.Windows.* $folder/Fetcharr.Update
 
     ProgressEnd 'Creating Windows Package'
 }
@@ -246,7 +246,7 @@ BuildInstaller()
     local framework="$1"
     local runtime="$2"
     
-    ./_inno/ISCC.exe distribution/windows/setup/prowlarr.iss "//DFramework=$framework" "//DRuntime=$runtime"
+    ./_inno/ISCC.exe distribution/windows/setup/fetcharr.iss "//DFramework=$framework" "//DRuntime=$runtime"
 }
 
 InstallInno()

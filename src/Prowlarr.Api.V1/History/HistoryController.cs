@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.History;
-using Prowlarr.Http;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Api.V1.History
+namespace Fetcharr.Api.V1.History
 {
     [V1ApiController]
     public class HistoryController : Controller

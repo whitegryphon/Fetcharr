@@ -8,15 +8,15 @@ using NLog;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
-using Prowlarr.Http.Exceptions;
+using Fetcharr.Http.Exceptions;
 
-namespace Prowlarr.Http.ErrorManagement
+namespace Fetcharr.Http.ErrorManagement
 {
-    public class ProwlarrErrorPipeline
+    public class FetcharrErrorPipeline
     {
         private readonly Logger _logger;
 
-        public ProwlarrErrorPipeline(Logger logger)
+        public FetcharrErrorPipeline(Logger logger)
         {
             _logger = logger;
         }

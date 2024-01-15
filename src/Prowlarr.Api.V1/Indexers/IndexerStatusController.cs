@@ -6,10 +6,10 @@ using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.ThingiProvider.Events;
 using NzbDrone.SignalR;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Indexers
+namespace Fetcharr.Api.V1.Indexers
 {
     [V1ApiController]
     public class IndexerStatusController : RestControllerWithSignalR<IndexerStatusResource, IndexerStatus>,

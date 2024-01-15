@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Update;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Update
+namespace Fetcharr.Api.V1.Update
 {
     public class UpdateResource : RestResource
     {

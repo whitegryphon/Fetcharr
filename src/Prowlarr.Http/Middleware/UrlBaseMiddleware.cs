@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.Extensions;
 
-namespace Prowlarr.Http.Middleware
+namespace Fetcharr.Http.Middleware
 {
     public class UrlBaseMiddleware
     {

@@ -353,5 +353,5 @@
     "DisabledForLocalAddresses": "ローカルアドレスでは無効",
     "None": "なし",
     "ResetAPIKeyMessageText": "APIキーをリセットしてもよろしいですか？",
-    "RestartProwlarr": "{appName}を再起動します"
+    "RestartFetcharr": "{appName}を再起動します"
 }

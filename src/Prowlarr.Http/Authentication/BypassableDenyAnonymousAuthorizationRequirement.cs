@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     public class BypassableDenyAnonymousAuthorizationRequirement : DenyAnonymousAuthorizationRequirement
     {

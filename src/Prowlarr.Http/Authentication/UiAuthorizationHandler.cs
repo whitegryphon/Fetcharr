@@ -7,9 +7,9 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Configuration.Events;
 using NzbDrone.Core.Messaging.Events;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     public class UiAuthorizationHandler : AuthorizationHandler<BypassableDenyAnonymousAuthorizationRequirement>, IAuthorizationRequirement, IHandle<ConfigSavedEvent>
     {

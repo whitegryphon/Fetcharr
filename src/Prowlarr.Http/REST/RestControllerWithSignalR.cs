@@ -5,7 +5,7 @@ using NzbDrone.Core.Datastore.Events;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.SignalR;
 
-namespace Prowlarr.Http.REST
+namespace Fetcharr.Http.REST
 {
     public abstract class RestControllerWithSignalR<TResource, TModel> : RestController<TResource>, IHandle<ModelEvent<TModel>>
         where TResource : RestResource, new()

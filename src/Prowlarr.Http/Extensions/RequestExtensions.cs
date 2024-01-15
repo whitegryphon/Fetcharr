@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Datastore;
 
-namespace Prowlarr.Http.Extensions
+namespace Fetcharr.Http.Extensions
 {
     public static class RequestExtensions
     {
@@ -65,9 +65,9 @@ namespace Prowlarr.Http.Extensions
 
         public static string GetSource(this HttpRequest request)
         {
-            if (request.Headers.TryGetValue("X-Prowlarr-Client", out var source))
+            if (request.Headers.TryGetValue("X-Fetcharr-Client", out var source))
             {
-                return "Prowlarr";
+                return "Fetcharr";
             }
 
             return NzbDrone.Common.Http.UserAgentParser.ParseSource(request.Headers["User-Agent"]);

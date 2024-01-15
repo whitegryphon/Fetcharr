@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using NzbDrone.Core.IndexerStats;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Indexers
+namespace Fetcharr.Api.V1.Indexers
 {
     public class IndexerStatsResource : RestResource
     {

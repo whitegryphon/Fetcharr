@@ -3,9 +3,9 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Security;
 using NzbDrone.Core.Update;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     public class HostConfigResource : RestResource
     {

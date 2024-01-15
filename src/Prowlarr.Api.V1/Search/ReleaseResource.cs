@@ -4,9 +4,9 @@ using System.Linq;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Search
+namespace Fetcharr.Api.V1.Search
 {
     public class ReleaseResource : RestResource
     {

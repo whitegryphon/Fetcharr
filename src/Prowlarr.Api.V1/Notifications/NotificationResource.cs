@@ -1,6 +1,6 @@
 using NzbDrone.Core.Notifications;
 
-namespace Prowlarr.Api.V1.Notifications
+namespace Fetcharr.Api.V1.Notifications
 {
     public class NotificationResource : ProviderResource<NotificationResource>
     {

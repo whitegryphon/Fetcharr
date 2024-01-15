@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using NzbDrone.Core.Datastore;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class PagingRequestResource
     {

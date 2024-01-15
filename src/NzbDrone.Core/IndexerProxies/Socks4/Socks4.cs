@@ -9,7 +9,7 @@ namespace NzbDrone.Core.IndexerProxies.Socks4
 {
     public class Socks4 : HttpIndexerProxyBase<Socks4Settings>
     {
-        public Socks4(IProwlarrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
+        public Socks4(IFetcharrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
             : base(cloudRequestBuilder, httpClient, logger, localizationService)
         {
         }

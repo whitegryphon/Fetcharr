@@ -47,7 +47,7 @@ namespace NzbDrone.Core.Test.IndexerTests.GazelleGamesTests
 
             torrentInfo.Title.Should().Be("Microsoft_Flight_Simulator-HOODLUM (2020) [Windows / Multi-Language / Full ISO]");
             torrentInfo.DownloadProtocol.Should().Be(DownloadProtocol.Torrent);
-            torrentInfo.DownloadUrl.Should().Be("https://gazellegames.net/torrents.php?action=download&id=303216&authkey=prowlarr&torrent_pass=");
+            torrentInfo.DownloadUrl.Should().Be("https://gazellegames.net/torrents.php?action=download&id=303216&authkey=fetcharr&torrent_pass=");
             torrentInfo.InfoUrl.Should().Be("https://gazellegames.net/torrents.php?id=84781&torrentid=303216");
             torrentInfo.CommentUrl.Should().BeNullOrEmpty();
             torrentInfo.Indexer.Should().Be(Subject.Definition.Name);

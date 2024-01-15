@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.HealthCheck;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Health
+namespace Fetcharr.Api.V1.Health
 {
     public class HealthResource : RestResource
     {

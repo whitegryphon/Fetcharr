@@ -375,5 +375,5 @@
     "None": "Żaden",
     "AuthBasic": "Podstawowe (wyskakujące okienko przeglądarki)",
     "ResetAPIKeyMessageText": "Czy na pewno chcesz zresetować swój klucz API?",
-    "RestartProwlarr": "Zrestartuj {appName}"
+    "RestartFetcharr": "Zrestartuj {appName}"
 }

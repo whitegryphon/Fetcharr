@@ -1,4 +1,4 @@
-namespace Prowlarr.Http.Ping
+namespace Fetcharr.Http.Ping
 {
     public class PingResource
     {

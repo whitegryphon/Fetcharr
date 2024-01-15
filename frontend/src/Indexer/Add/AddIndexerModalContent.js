@@ -241,7 +241,7 @@ class AddIndexerModalContent extends Component {
             className={styles.alert}
           >
             <div>
-              {translate('ProwlarrSupportsAnyIndexer')}
+              {translate('FetcharrSupportsAnyIndexer')}
             </div>
           </Alert>
 

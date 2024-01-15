@@ -12,7 +12,7 @@
     <PackageReference Include="RestSharp.Serializers.SystemTextJson" Version="106.15.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Prowlarr.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Prowlarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Fetcharr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Fetcharr.Core.csproj" />
   </ItemGroup>
 </Project>

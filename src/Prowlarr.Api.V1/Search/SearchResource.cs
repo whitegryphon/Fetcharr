@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Prowlarr.Api.V1.Search
+namespace Fetcharr.Api.V1.Search
 {
     public class SearchResource
     {

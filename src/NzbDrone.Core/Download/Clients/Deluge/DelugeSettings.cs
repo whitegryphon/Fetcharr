@@ -25,7 +25,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             Host = "localhost";
             Port = 8112;
             Password = "deluge";
-            Category = "prowlarr";
+            Category = "fetcharr";
         }
 
         [FieldDefinition(0, Label = "Host", Type = FieldType.Textbox)]
@@ -43,7 +43,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
         [FieldDefinition(4, Label = "Password", Type = FieldType.Password, Privacy = PrivacyLevel.Password)]
         public string Password { get; set; }
 
-        [FieldDefinition(5, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Default fallback Category if no mapped category exists for a release. Adding a category specific to Prowlarr avoids conflicts with unrelated downloads, but it's optional")]
+        [FieldDefinition(5, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Default fallback Category if no mapped category exists for a release. Adding a category specific to Fetcharr avoids conflicts with unrelated downloads, but it's optional")]
         public string Category { get; set; }
 
         [FieldDefinition(6, Label = "Priority", Type = FieldType.Select, SelectOptions = typeof(DelugePriority), HelpText = "Priority to use when grabbing items")]

@@ -392,7 +392,7 @@ public class ShazbatSettings : UserPassTorrentBaseSettings
 {
     private static readonly ShazbatSettingsValidator Validator = new ();
 
-    [FieldDefinition(4, Type = FieldType.Number, Label = "Show Pages Fetch Limit", HelpText = "The number of show pages should Prowlarr fetch when searching. Default: 2.")]
+    [FieldDefinition(4, Type = FieldType.Number, Label = "Show Pages Fetch Limit", HelpText = "The number of show pages should Fetcharr fetch when searching. Default: 2.")]
     public int? ShowPagesFetchLimit { get; set; }
 
     public override NzbDroneValidationResult Validate()

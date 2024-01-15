@@ -12,11 +12,11 @@
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Prowlarr.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Prowlarr.Core.csproj" />
-    <ProjectReference Include="..\NzbDrone.SignalR\Prowlarr.SignalR.csproj" />
-    <ProjectReference Include="..\Prowlarr.Api.V1\Prowlarr.Api.V1.csproj" />
-    <ProjectReference Include="..\Prowlarr.Http\Prowlarr.Http.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Fetcharr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Fetcharr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.SignalR\Fetcharr.SignalR.csproj" />
+    <ProjectReference Include="..\Fetcharr.Api.V1\Fetcharr.Api.V1.csproj" />
+    <ProjectReference Include="..\Fetcharr.Http\Fetcharr.Http.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Interop.NetFwTypeLib">

@@ -3,12 +3,12 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net6.0</TargetFrameworks>
 
-    <ApplicationIcon>..\NzbDrone.Host\Prowlarr.ico</ApplicationIcon>
+    <ApplicationIcon>..\NzbDrone.Host\Fetcharr.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="!$(RuntimeIdentifier.StartsWith('win'))">
-    <AssemblyName>Prowlarr</AssemblyName>
+    <AssemblyName>Fetcharr</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Prowlarr.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Fetcharr.Host.csproj" />
   </ItemGroup>
 </Project>

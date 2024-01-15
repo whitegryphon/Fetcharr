@@ -7,7 +7,7 @@
     <PackageReference Include="NLog" Version="5.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Core\Prowlarr.Core.csproj" />
-    <ProjectReference Include="..\Prowlarr.Http\Prowlarr.Http.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Fetcharr.Core.csproj" />
+    <ProjectReference Include="..\Fetcharr.Http\Fetcharr.Http.csproj" />
   </ItemGroup>
 </Project>

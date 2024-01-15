@@ -12,11 +12,11 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.ProgressMessaging;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
-using Prowlarr.Http.Validation;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
+using Fetcharr.Http.Validation;
 
-namespace Prowlarr.Api.V1.Commands
+namespace Fetcharr.Api.V1.Commands
 {
     [V1ApiController]
     public class CommandController : RestControllerWithSignalR<CommandResource, CommandModel>, IHandle<CommandUpdatedEvent>

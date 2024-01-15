@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NLog;
 using NzbDrone.Common.Extensions;
-using Prowlarr.Http.ErrorManagement;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.ErrorManagement;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Middleware
+namespace Fetcharr.Http.Middleware
 {
     public class LoggingMiddleware
     {
@@ -16,11 +16,11 @@ namespace Prowlarr.Http.Middleware
         private static readonly Logger _loggerApi = LogManager.GetLogger("Api");
         private static int _requestSequenceID;
 
-        private readonly ProwlarrErrorPipeline _errorHandler;
+        private readonly FetcharrErrorPipeline _errorHandler;
         private readonly RequestDelegate _next;
 
         public LoggingMiddleware(RequestDelegate next,
-            ProwlarrErrorPipeline errorHandler)
+            FetcharrErrorPipeline errorHandler)
         {
             _next = next;
             _errorHandler = errorHandler;

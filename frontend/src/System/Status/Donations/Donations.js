@@ -16,7 +16,7 @@ class Donations extends Component {
           <Link to="https://radarr.video/donate">
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/Icons/logo-radarr.png`}
+              src={`${window.Fetcharr.urlBase}/Content/Images/Icons/logo-radarr.png`}
             />
           </Link>
         </div>
@@ -24,7 +24,7 @@ class Donations extends Component {
           <Link to="https://lidarr.audio/donate">
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/Icons/logo-lidarr.png`}
+              src={`${window.Fetcharr.urlBase}/Content/Images/Icons/logo-lidarr.png`}
             />
           </Link>
         </div>
@@ -32,15 +32,15 @@ class Donations extends Component {
           <Link to="https://readarr.com/donate">
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/Icons/logo-readarr.png`}
+              src={`${window.Fetcharr.urlBase}/Content/Images/Icons/logo-readarr.png`}
             />
           </Link>
         </div>
-        <div className={styles.logoContainer} title="Prowlarr">
-          <Link to="https://prowlarr.com/donate">
+        <div className={styles.logoContainer} title="Fetcharr">
+          <Link to="https://fetcharr.com/donate">
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/Icons/logo-prowlarr.png`}
+              src={`${window.Fetcharr.urlBase}/Content/Images/Icons/logo-fetcharr.png`}
             />
           </Link>
         </div>
@@ -48,7 +48,7 @@ class Donations extends Component {
           <Link to="https://opencollective.com/sonarr">
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/Icons/logo-sonarr.png`}
+              src={`${window.Fetcharr.urlBase}/Content/Images/Icons/logo-sonarr.png`}
             />
           </Link>
         </div>

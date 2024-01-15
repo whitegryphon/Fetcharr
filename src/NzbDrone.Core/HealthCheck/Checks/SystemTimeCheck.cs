@@ -14,7 +14,7 @@ namespace NzbDrone.Core.HealthCheck.Checks
         private readonly IHttpRequestBuilderFactory _cloudRequestBuilder;
         private readonly Logger _logger;
 
-        public SystemTimeCheck(IHttpClient client, IProwlarrCloudRequestBuilder cloudRequestBuilder, ILocalizationService localizationService, Logger logger)
+        public SystemTimeCheck(IHttpClient client, IFetcharrCloudRequestBuilder cloudRequestBuilder, ILocalizationService localizationService, Logger logger)
             : base(localizationService)
         {
             _client = client;

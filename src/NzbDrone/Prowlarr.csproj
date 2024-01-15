@@ -4,15 +4,15 @@
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>..\NzbDrone.Host\Prowlarr.ico</ApplicationIcon>
+    <ApplicationIcon>..\NzbDrone.Host\Fetcharr.ico</ApplicationIcon>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Prowlarr.Host.csproj" />
-    <ProjectReference Include="..\NzbDrone.Windows\Prowlarr.Windows.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Fetcharr.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Windows\Fetcharr.Windows.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

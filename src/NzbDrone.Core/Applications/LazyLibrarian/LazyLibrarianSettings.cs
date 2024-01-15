@@ -11,7 +11,7 @@ namespace NzbDrone.Core.Applications.LazyLibrarian
         public LazyLibrarianSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).IsValidUrl();
-            RuleFor(c => c.ProwlarrUrl).IsValidUrl();
+            RuleFor(c => c.FetcharrUrl).IsValidUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
             RuleFor(c => c.SyncCategories).NotEmpty();
         }
@@ -23,7 +23,7 @@ namespace NzbDrone.Core.Applications.LazyLibrarian
 
         public LazyLibrarianSettings()
         {
-            ProwlarrUrl = "http://localhost:9696";
+            FetcharrUrl = "http://localhost:9696";
             BaseUrl = "http://localhost:5299";
             SyncCategories = new[]
             {
@@ -38,8 +38,8 @@ namespace NzbDrone.Core.Applications.LazyLibrarian
             };
         }
 
-        [FieldDefinition(0, Label = "Prowlarr Server", HelpText = "Prowlarr server URL as LazyLibrarian sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
-        public string ProwlarrUrl { get; set; }
+        [FieldDefinition(0, Label = "Fetcharr Server", HelpText = "Fetcharr server URL as LazyLibrarian sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
+        public string FetcharrUrl { get; set; }
 
         [FieldDefinition(1, Label = "LazyLibrarian Server", HelpText = "URL used to connect to LazyLibrarian server, including http(s)://, port, and urlbase if required", Placeholder = "http://localhost:5299")]
         public string BaseUrl { get; set; }

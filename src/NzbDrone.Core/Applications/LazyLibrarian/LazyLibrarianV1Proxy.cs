@@ -21,7 +21,7 @@ namespace NzbDrone.Core.Applications.LazyLibrarian
 
     public class LazyLibrarianV1Proxy : ILazyLibrarianV1Proxy
     {
-        private const int ProwlarrHighestPriority = 50;
+        private const int FetcharrHighestPriority = 50;
 
         private readonly IHttpClient _httpClient;
         private readonly Logger _logger;
@@ -201,6 +201,6 @@ namespace NzbDrone.Core.Applications.LazyLibrarian
             return Json.Deserialize<TResource>(response.Content);
         }
 
-        private int CalculatePriority(int indexerPriority) => ProwlarrHighestPriority - indexerPriority + 1;
+        private int CalculatePriority(int indexerPriority) => FetcharrHighestPriority - indexerPriority + 1;
     }
 }

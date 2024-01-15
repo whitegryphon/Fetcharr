@@ -328,7 +328,7 @@
     "AddNewIndexer": "Добавить Новый Индексатор",
     "AddToDownloadClient": "Добавить выпуск в Загрузочный клиент",
     "AddedToDownloadClient": "Выпуск добавлен в клиент",
-    "AddDownloadClientToProwlarr": "Добавление клиента загрузки позволяет {appName} отправлять выпуски прямо из пользовательского интерфейса, выполняя поиск вручную.",
+    "AddDownloadClientToFetcharr": "Добавление клиента загрузки позволяет {appName} отправлять выпуски прямо из пользовательского интерфейса, выполняя поиск вручную.",
     "AddIndexerProxy": "Добавить индексатор прокси",
     "Connect": "Оповещения",
     "Notification": "Оповещения",
@@ -419,6 +419,6 @@
     "AuthenticationMethod": "Способ авторизации",
     "AuthenticationRequiredPasswordHelpTextWarning": "Введите новый пароль",
     "AuthenticationRequiredUsernameHelpTextWarning": "Введите новое имя пользователя",
-    "RestartProwlarr": "Перезапустить {appName}",
+    "RestartFetcharr": "Перезапустить {appName}",
     "AuthenticationRequiredWarning": "Чтобы предотвратить удаленный доступ без авторизации, {appName} теперь требует, чтобы авторизация была включена. При желании вы можете отключить авторизацию с локальных адресов."
 }

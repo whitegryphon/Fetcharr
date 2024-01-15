@@ -23,12 +23,12 @@ using NzbDrone.Core.Lifecycle;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Host.AccessControl;
 using NzbDrone.SignalR;
-using Prowlarr.Api.V1.System;
-using Prowlarr.Http;
-using Prowlarr.Http.Authentication;
-using Prowlarr.Http.ErrorManagement;
-using Prowlarr.Http.Frontend;
-using Prowlarr.Http.Middleware;
+using Fetcharr.Api.V1.System;
+using Fetcharr.Http;
+using Fetcharr.Http.Authentication;
+using Fetcharr.Http.ErrorManagement;
+using Fetcharr.Http.Frontend;
+using Fetcharr.Http.Middleware;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace NzbDrone.Host
@@ -49,7 +49,7 @@ namespace NzbDrone.Host
                 b.ClearProviders();
                 b.SetMinimumLevel(LogLevel.Trace);
                 b.AddFilter("Microsoft.AspNetCore", LogLevel.Warning);
-                b.AddFilter("Prowlarr.Http.Authentication", LogLevel.Information);
+                b.AddFilter("Fetcharr.Http.Authentication", LogLevel.Information);
                 b.AddFilter("Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager", LogLevel.Error);
                 b.AddNLog();
             });
@@ -98,12 +98,12 @@ namespace NzbDrone.Host
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "1.0.0",
-                    Title = "Prowlarr",
-                    Description = "Prowlarr API docs",
+                    Title = "Fetcharr",
+                    Description = "Fetcharr API docs",
                     License = new OpenApiLicense
                     {
                         Name = "GPL-3.0",
-                        Url = new Uri("https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE")
+                        Url = new Uri("https://github.com/Fetcharr/Fetcharr/blob/develop/LICENSE")
                     }
                 });
 
@@ -221,7 +221,7 @@ namespace NzbDrone.Host
                               IRuntimeInfo runtimeInfo,
                               IFirewallAdapter firewallAdapter,
                               IEventAggregator eventAggregator,
-                              ProwlarrErrorPipeline errorHandler)
+                              FetcharrErrorPipeline errorHandler)
         {
             initializeLogger.Initialize();
             appFolderFactory.Register();

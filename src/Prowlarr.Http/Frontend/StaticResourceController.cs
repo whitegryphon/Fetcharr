@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using Prowlarr.Http.Extensions;
-using Prowlarr.Http.Frontend.Mappers;
+using Fetcharr.Http.Extensions;
+using Fetcharr.Http.Frontend.Mappers;
 
-namespace Prowlarr.Http.Frontend
+namespace Fetcharr.Http.Frontend
 {
     [Authorize(Policy="UI")]
     [ApiController]

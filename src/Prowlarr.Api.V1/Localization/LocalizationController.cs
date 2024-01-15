@@ -3,9 +3,9 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Localization;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Localization
+namespace Fetcharr.Api.V1.Localization
 {
     [V1ApiController]
     public class LocalizationController : Controller

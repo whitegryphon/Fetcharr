@@ -366,7 +366,7 @@
     "AddIndexerProxyImplementation": "Koşul Ekle - {implementationName}",
     "EditConnectionImplementation": "Koşul Ekle - {implementationName}",
     "AddConnectionImplementation": "Koşul Ekle - {implementationName}",
-    "RestartProwlarr": "{appName}'ı yeniden başlatın",
+    "RestartFetcharr": "{appName}'ı yeniden başlatın",
     "EditApplicationImplementation": "Koşul Ekle - {implementationName}",
     "EditIndexerImplementation": "Koşul Ekle - {implementationName}",
     "EditIndexerProxyImplementation": "Koşul Ekle - {implementationName}"

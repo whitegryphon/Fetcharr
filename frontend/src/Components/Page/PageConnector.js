@@ -17,7 +17,7 @@ import LoadingPage from './LoadingPage';
 import Page from './Page';
 
 function testLocalStorage() {
-  const key = 'prowlarrTest';
+  const key = 'fetcharrTest';
 
   try {
     localStorage.setItem(key, key);

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using FluentValidation.Results;
 using NzbDrone.Common.Extensions;
 
-namespace Prowlarr.Api.V1
+namespace Fetcharr.Api.V1
 {
     public class ProviderTestAllResult
     {

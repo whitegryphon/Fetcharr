@@ -185,7 +185,7 @@ function IndexerInfoModalContent(props: IndexerInfoModalContentProps) {
                         : translate('TorznabUrl')}
                     </DescriptionListItemTitle>
                     <DescriptionListItemDescription>
-                      {`${window.location.origin}${window.Prowlarr.urlBase}/${id}/api`}
+                      {`${window.location.origin}${window.Fetcharr.urlBase}/${id}/api`}
                     </DescriptionListItemDescription>
                     {tags.length > 0 ? (
                       <>

@@ -100,7 +100,7 @@ const config = {
   slicer,
   serialize,
   merge,
-  key: 'prowlarr'
+  key: 'fetcharr'
 };
 
 export default function createPersistState() {

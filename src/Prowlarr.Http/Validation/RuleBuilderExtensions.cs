@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using FluentValidation;
 using FluentValidation.Validators;
 
-namespace Prowlarr.Http.Validation
+namespace Fetcharr.Http.Validation
 {
     public static class RuleBuilderExtensions
     {

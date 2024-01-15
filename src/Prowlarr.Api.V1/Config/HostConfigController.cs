@@ -11,10 +11,10 @@ using NzbDrone.Core.Update;
 using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     [V1ApiController("config/host")]
     public class HostConfigController : RestController<HostConfigResource>
@@ -40,7 +40,7 @@ namespace Prowlarr.Api.V1.Config
             SharedValidator.RuleFor(c => c.Port).ValidPort();
 
             SharedValidator.RuleFor(c => c.UrlBase).ValidUrlBase();
-            SharedValidator.RuleFor(c => c.InstanceName).ContainsProwlarr().When(c => c.InstanceName.IsNotNullOrWhiteSpace());
+            SharedValidator.RuleFor(c => c.InstanceName).ContainsFetcharr().When(c => c.InstanceName.IsNotNullOrWhiteSpace());
 
             SharedValidator.RuleFor(c => c.Username).NotEmpty().When(c => c.AuthenticationMethod == AuthenticationType.Basic ||
                                                                           c.AuthenticationMethod == AuthenticationType.Forms);

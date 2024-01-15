@@ -1,9 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.IndexerProxies;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.IndexerProxies
+namespace Fetcharr.Api.V1.IndexerProxies
 {
     [V1ApiController]
     public class IndexerProxyController : ProviderControllerBase<IndexerProxyResource, IndexerProxyBulkResource, IIndexerProxy, IndexerProxyDefinition>

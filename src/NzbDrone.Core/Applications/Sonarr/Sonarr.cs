@@ -60,16 +60,16 @@ namespace NzbDrone.Core.Applications.Sonarr
                         failures.AddIfNotNull(new ValidationFailure("ApiKey", "API Key is invalid"));
                         break;
                     case HttpStatusCode.BadRequest:
-                        _logger.Warn(ex, "Prowlarr URL is invalid");
-                        failures.AddIfNotNull(new ValidationFailure("ProwlarrUrl", "Prowlarr URL is invalid, Sonarr cannot connect to Prowlarr"));
+                        _logger.Warn(ex, "Fetcharr URL is invalid");
+                        failures.AddIfNotNull(new ValidationFailure("FetcharrUrl", "Fetcharr URL is invalid, Sonarr cannot connect to Fetcharr"));
                         break;
                     case HttpStatusCode.SeeOther:
                         _logger.Warn(ex, "Sonarr returned redirect and is invalid");
-                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Sonarr URL is invalid, Prowlarr cannot connect to Sonarr - are you missing a URL base?"));
+                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Sonarr URL is invalid, Fetcharr cannot connect to Sonarr - are you missing a URL base?"));
                         break;
                     case HttpStatusCode.NotFound:
                         _logger.Warn(ex, "Sonarr not found");
-                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Sonarr URL is invalid, Prowlarr cannot connect to Sonarr. Is Sonarr running and accessible? Sonarr v2 is not supported."));
+                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Sonarr URL is invalid, Fetcharr cannot connect to Sonarr. Is Sonarr running and accessible? Sonarr v2 is not supported."));
                         break;
                     default:
                         _logger.Warn(ex, "Unable to complete application test");
@@ -102,7 +102,7 @@ namespace NzbDrone.Core.Applications.Sonarr
             {
                 var baseUrl = (string)indexer.Fields.FirstOrDefault(x => x.Name == "baseUrl")?.Value ?? string.Empty;
 
-                if (!baseUrl.StartsWith(Settings.ProwlarrUrl.TrimEnd('/')) &&
+                if (!baseUrl.StartsWith(Settings.FetcharrUrl.TrimEnd('/')) &&
                     (string)indexer.Fields.FirstOrDefault(x => x.Name == "apiKey")?.Value != _configFileProvider.ApiKey)
                 {
                     continue;
@@ -112,7 +112,7 @@ namespace NzbDrone.Core.Applications.Sonarr
 
                 if (match.Groups["indexer"].Success && int.TryParse(match.Groups["indexer"].Value, out var indexerId))
                 {
-                    // Add parsed mapping if it's mapped to a Indexer in this Prowlarr instance
+                    // Add parsed mapping if it's mapped to a Indexer in this Fetcharr instance
                     mappings.Add(new AppIndexerMap { IndexerId = indexerId, RemoteIndexerId = indexer.Id });
                 }
             }
@@ -181,13 +181,13 @@ namespace NzbDrone.Core.Applications.Sonarr
 
                     if (indexer.Capabilities.Categories.SupportedCategories(Settings.SyncCategories.ToArray()).Any() || indexer.Capabilities.Categories.SupportedCategories(Settings.AnimeSyncCategories.ToArray()).Any())
                     {
-                        // Retain user fields not-affiliated with Prowlarr
+                        // Retain user fields not-affiliated with Fetcharr
                         sonarrIndexer.Fields.AddRange(remoteIndexer.Fields.Where(f => sonarrIndexer.Fields.All(s => s.Name != f.Name)));
 
-                        // Retain user tags not-affiliated with Prowlarr
+                        // Retain user tags not-affiliated with Fetcharr
                         sonarrIndexer.Tags.UnionWith(remoteIndexer.Tags);
 
-                        // Retain user settings not-affiliated with Prowlarr
+                        // Retain user settings not-affiliated with Fetcharr
                         sonarrIndexer.DownloadClientId = remoteIndexer.DownloadClientId;
                         sonarrIndexer.SeasonSearchMaximumSingleEpisodeAge = remoteIndexer.SeasonSearchMaximumSingleEpisodeAge;
 
@@ -240,7 +240,7 @@ namespace NzbDrone.Core.Applications.Sonarr
             var sonarrIndexer = new SonarrIndexer
             {
                 Id = id,
-                Name = $"{indexer.Name} (Prowlarr)",
+                Name = $"{indexer.Name} (Fetcharr)",
                 EnableRss = indexer.Enable && indexer.AppProfile.Value.EnableRss,
                 EnableAutomaticSearch = indexer.Enable && indexer.AppProfile.Value.EnableAutomaticSearch,
                 EnableInteractiveSearch = indexer.Enable && indexer.AppProfile.Value.EnableInteractiveSearch,
@@ -253,7 +253,7 @@ namespace NzbDrone.Core.Applications.Sonarr
 
             sonarrIndexer.Fields.AddRange(schema.Fields.Where(x => syncFields.Contains(x.Name)));
 
-            sonarrIndexer.Fields.FirstOrDefault(x => x.Name == "baseUrl").Value = $"{Settings.ProwlarrUrl.TrimEnd('/')}/{indexer.Id}/";
+            sonarrIndexer.Fields.FirstOrDefault(x => x.Name == "baseUrl").Value = $"{Settings.FetcharrUrl.TrimEnd('/')}/{indexer.Id}/";
             sonarrIndexer.Fields.FirstOrDefault(x => x.Name == "apiPath").Value = "/api";
             sonarrIndexer.Fields.FirstOrDefault(x => x.Name == "apiKey").Value = _configFileProvider.ApiKey;
             sonarrIndexer.Fields.FirstOrDefault(x => x.Name == "categories").Value = JArray.FromObject(indexer.Capabilities.Categories.SupportedCategories(Settings.SyncCategories.ToArray()));

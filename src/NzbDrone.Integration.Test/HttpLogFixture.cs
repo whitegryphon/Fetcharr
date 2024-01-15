@@ -17,10 +17,10 @@ namespace NzbDrone.Integration.Test
 
             var resultGet = Indexers.All();
 
-            var logFile = "prowlarr.trace.txt";
+            var logFile = "fetcharr.trace.txt";
             var logLines = Logs.GetLogFileLines(logFile);
 
-            var resultPost = Indexers.InvalidPost(new Prowlarr.Api.V1.Indexers.IndexerResource());
+            var resultPost = Indexers.InvalidPost(new Fetcharr.Api.V1.Indexers.IndexerResource());
 
             // Skip 2 and 1 to ignore the logs endpoint
             logLines = Logs.GetLogFileLines(logFile).Skip(logLines.Length + 2).ToArray();

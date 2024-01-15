@@ -11,7 +11,7 @@ namespace NzbDrone.Core.Applications.Readarr
         public ReadarrSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).IsValidUrl();
-            RuleFor(c => c.ProwlarrUrl).IsValidUrl();
+            RuleFor(c => c.FetcharrUrl).IsValidUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
             RuleFor(c => c.SyncCategories).NotEmpty();
         }
@@ -23,13 +23,13 @@ namespace NzbDrone.Core.Applications.Readarr
 
         public ReadarrSettings()
         {
-            ProwlarrUrl = "http://localhost:9696";
+            FetcharrUrl = "http://localhost:9696";
             BaseUrl = "http://localhost:8787";
             SyncCategories = new[] { 3030, 7000, 7010, 7020, 7030, 7040, 7050, 7060 };
         }
 
-        [FieldDefinition(0, Label = "Prowlarr Server", HelpText = "Prowlarr server URL as Readarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
-        public string ProwlarrUrl { get; set; }
+        [FieldDefinition(0, Label = "Fetcharr Server", HelpText = "Fetcharr server URL as Readarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
+        public string FetcharrUrl { get; set; }
 
         [FieldDefinition(1, Label = "Readarr Server", HelpText = "URL used to connect to Readarr server, including http(s)://, port, and urlbase if required", Placeholder = "http://localhost:8787")]
         public string BaseUrl { get; set; }

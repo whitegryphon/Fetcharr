@@ -8,10 +8,10 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Lifecycle;
-using Prowlarr.Http;
-using Prowlarr.Http.Validation;
+using Fetcharr.Http;
+using Fetcharr.Http.Validation;
 
-namespace Prowlarr.Api.V1.System
+namespace Fetcharr.Api.V1.System
 {
     [V1ApiController]
     public class SystemController : Controller

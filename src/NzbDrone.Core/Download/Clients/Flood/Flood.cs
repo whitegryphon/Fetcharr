@@ -62,7 +62,7 @@ namespace NzbDrone.Core.Download.Clients.Flood
 
         public override string Name => "Flood";
         public override bool SupportsCategories => true;
-        public override ProviderMessage Message => new ProviderMessage("Prowlarr is unable to remove torrents that have finished seeding when using Flood", ProviderMessageType.Warning);
+        public override ProviderMessage Message => new ProviderMessage("Fetcharr is unable to remove torrents that have finished seeding when using Flood", ProviderMessageType.Warning);
 
         protected override string AddFromTorrentFile(TorrentInfo release, string hash, string filename, byte[] fileContent)
         {

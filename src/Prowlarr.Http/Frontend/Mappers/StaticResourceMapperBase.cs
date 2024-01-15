@@ -9,7 +9,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 
-namespace Prowlarr.Http.Frontend.Mappers
+namespace Fetcharr.Http.Frontend.Mappers
 {
     public abstract class StaticResourceMapperBase : IMapHttpRequestsToDisk
     {

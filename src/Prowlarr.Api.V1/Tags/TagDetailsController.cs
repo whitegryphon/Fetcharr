@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Tags;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Tags
+namespace Fetcharr.Api.V1.Tags
 {
     [V1ApiController("tag/detail")]
     public class TagDetailsController : RestController<TagDetailsResource>

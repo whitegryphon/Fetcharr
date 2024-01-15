@@ -1,4 +1,4 @@
-if (window.Prowlarr.analytics) {
+if (window.Fetcharr.analytics) {
   const d = document;
   const g = d.createElement('script');
   const s = d.getElementsByTagName('script')[0];

@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Prowlarr",
-    "description": "Prowlarr API docs",
+    "title": "Fetcharr",
+    "description": "Fetcharr API docs",
     "license": {
       "name": "GPL-3.0",
-      "url": "https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE"
+      "url": "https://github.com/Fetcharr/Fetcharr/blob/develop/LICENSE"
     },
     "version": "1.0.0"
   },

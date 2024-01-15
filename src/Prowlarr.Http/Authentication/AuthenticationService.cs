@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Http;
 using NLog;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     public interface IAuthenticationService
     {

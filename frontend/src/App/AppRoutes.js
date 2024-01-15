@@ -42,7 +42,7 @@ function AppRoutes(props) {
       />
 
       {
-        window.Prowlarr.urlBase &&
+        window.Fetcharr.urlBase &&
           <Route
             exact={true}
             path="/"

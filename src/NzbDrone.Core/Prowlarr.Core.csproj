@@ -25,7 +25,7 @@
     <PackageReference Include="AngleSharp" Version="1.0.6" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Prowlarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Fetcharr.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\..\Logo\64.png">

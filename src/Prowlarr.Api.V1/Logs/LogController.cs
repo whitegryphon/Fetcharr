@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Instrumentation;
-using Prowlarr.Http;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Api.V1.Logs
+namespace Fetcharr.Api.V1.Logs
 {
     [V1ApiController]
     public class LogController : Controller

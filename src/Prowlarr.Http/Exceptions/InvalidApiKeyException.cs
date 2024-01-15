@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Prowlarr.Http.Exceptions
+namespace Fetcharr.Http.Exceptions
 {
     public class InvalidApiKeyException : Exception
     {

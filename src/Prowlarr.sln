@@ -15,47 +15,47 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{0F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{4EACDBBC-BCD7-4765-A57B-3E08331E4749}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Http", "Prowlarr.Http\Prowlarr.Http.csproj", "{F8A02FD4-A7A4-40D0-BB81-6319105A3302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Http", "Fetcharr.Http\Fetcharr.Http.csproj", "{F8A02FD4-A7A4-40D0-BB81-6319105A3302}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Automation.Test", "NzbDrone.Automation.Test\Prowlarr.Automation.Test.csproj", "{2356C987-F992-4084-9DA2-5DAD1DA35E85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Automation.Test", "NzbDrone.Automation.Test\Fetcharr.Automation.Test.csproj", "{2356C987-F992-4084-9DA2-5DAD1DA35E85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Common.Test", "NzbDrone.Common.Test\Prowlarr.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Common.Test", "NzbDrone.Common.Test\Fetcharr.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Common", "NzbDrone.Common\Prowlarr.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Common", "NzbDrone.Common\Fetcharr.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Console", "NzbDrone.Console\Prowlarr.Console.csproj", "{AEA9EE9A-19BF-45CB-93D9-52CA443FD313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Console", "NzbDrone.Console\Fetcharr.Console.csproj", "{AEA9EE9A-19BF-45CB-93D9-52CA443FD313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Core.Test", "NzbDrone.Core.Test\Prowlarr.Core.Test.csproj", "{04ECC74F-C340-4987-863E-757FB62D27C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Core.Test", "NzbDrone.Core.Test\Fetcharr.Core.Test.csproj", "{04ECC74F-C340-4987-863E-757FB62D27C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Core", "NzbDrone.Core\Prowlarr.Core.csproj", "{82EBE37B-E3A7-4365-9B06-FA647BCC7AF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Core", "NzbDrone.Core\Fetcharr.Core.csproj", "{82EBE37B-E3A7-4365-9B06-FA647BCC7AF0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Host.Test", "NzbDrone.Host.Test\Prowlarr.Host.Test.csproj", "{6D4DE6D5-9594-4AE4-85E0-41C7FFCCED92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Host.Test", "NzbDrone.Host.Test\Fetcharr.Host.Test.csproj", "{6D4DE6D5-9594-4AE4-85E0-41C7FFCCED92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Host", "NzbDrone.Host\Prowlarr.Host.csproj", "{B6913970-FB88-4F6F-83F9-00728218E3FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Host", "NzbDrone.Host\Fetcharr.Host.csproj", "{B6913970-FB88-4F6F-83F9-00728218E3FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Integration.Test", "NzbDrone.Integration.Test\Prowlarr.Integration.Test.csproj", "{6D5618FB-45B9-44AE-BF99-8EF37519CB30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Integration.Test", "NzbDrone.Integration.Test\Fetcharr.Integration.Test.csproj", "{6D5618FB-45B9-44AE-BF99-8EF37519CB30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Libraries.Test", "NzbDrone.Libraries.Test\Prowlarr.Libraries.Test.csproj", "{1969394D-3181-404F-8E2C-E3E71A5BAD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Libraries.Test", "NzbDrone.Libraries.Test\Fetcharr.Libraries.Test.csproj", "{1969394D-3181-404F-8E2C-E3E71A5BAD30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Mono.Test", "NzbDrone.Mono.Test\Prowlarr.Mono.Test.csproj", "{CCE9ABBC-96BA-425B-8140-DC8102290BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Mono.Test", "NzbDrone.Mono.Test\Fetcharr.Mono.Test.csproj", "{CCE9ABBC-96BA-425B-8140-DC8102290BE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Mono", "NzbDrone.Mono\Prowlarr.Mono.csproj", "{504CD0A8-523B-4A0E-99BE-C179DECA9B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Mono", "NzbDrone.Mono\Fetcharr.Mono.csproj", "{504CD0A8-523B-4A0E-99BE-C179DECA9B76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.SignalR", "NzbDrone.SignalR\Prowlarr.SignalR.csproj", "{B30BE76E-4D20-47AA-9E03-E32613D888CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.SignalR", "NzbDrone.SignalR\Fetcharr.SignalR.csproj", "{B30BE76E-4D20-47AA-9E03-E32613D888CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Test.Common", "NzbDrone.Test.Common\Prowlarr.Test.Common.csproj", "{B8706292-5BE8-4099-94CA-F26DDD3757E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Test.Common", "NzbDrone.Test.Common\Fetcharr.Test.Common.csproj", "{B8706292-5BE8-4099-94CA-F26DDD3757E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Test.Dummy", "NzbDrone.Test.Dummy\Prowlarr.Test.Dummy.csproj", "{AFA7F48E-DB81-4E39-843B-78715C6ADF0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Test.Dummy", "NzbDrone.Test.Dummy\Fetcharr.Test.Dummy.csproj", "{AFA7F48E-DB81-4E39-843B-78715C6ADF0D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Update.Test", "NzbDrone.Update.Test\Prowlarr.Update.Test.csproj", "{A76441EE-AB2E-4E9D-8CD3-58BE5A8514D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Update.Test", "NzbDrone.Update.Test\Fetcharr.Update.Test.csproj", "{A76441EE-AB2E-4E9D-8CD3-58BE5A8514D3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Update", "NzbDrone.Update\Prowlarr.Update.csproj", "{4FBA2CBC-B022-41D6-B6DA-3166991B9172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Update", "NzbDrone.Update\Fetcharr.Update.csproj", "{4FBA2CBC-B022-41D6-B6DA-3166991B9172}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Windows.Test", "NzbDrone.Windows.Test\Prowlarr.Windows.Test.csproj", "{7BEDCC1E-0763-4553-B32B-0430B334ACBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Windows.Test", "NzbDrone.Windows.Test\Fetcharr.Windows.Test.csproj", "{7BEDCC1E-0763-4553-B32B-0430B334ACBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Windows", "NzbDrone.Windows\Prowlarr.Windows.csproj", "{3F076242-A6FA-4657-8606-AF1D150367FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Windows", "NzbDrone.Windows\Fetcharr.Windows.csproj", "{3F076242-A6FA-4657-8606-AF1D150367FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr", "NzbDrone\Prowlarr.csproj", "{0DC43D36-6680-4237-BE39-D5D094DBCE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr", "NzbDrone\Fetcharr.csproj", "{0DC43D36-6680-4237-BE39-D5D094DBCE29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceInstall", "ServiceHelpers\ServiceInstall\ServiceInstall.csproj", "{7DA231E8-A31D-4F53-8760-820861B6CE65}"
 EndProject
@@ -66,11 +66,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\.editorconfig = ..\.editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Api.V1", "Prowlarr.Api.V1\Prowlarr.Api.V1.csproj", "{022C0458-02DD-4D14-AF0E-F2FB87806A55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Api.V1", "Fetcharr.Api.V1\Fetcharr.Api.V1.csproj", "{022C0458-02DD-4D14-AF0E-F2FB87806A55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Api.V1.Test", "Prowlarr.Api.V1.Test\Prowlarr.Api.V1.Test.csproj", "{4EB5FDB5-5908-4415-8DFD-E5740A480D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Api.V1.Test", "Fetcharr.Api.V1.Test\Fetcharr.Api.V1.Test.csproj", "{4EB5FDB5-5908-4415-8DFD-E5740A480D92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prowlarr.Benchmark.Test", "Prowlarr.Benchmark.Test\Prowlarr.Benchmark.Test.csproj", "{56B0D244-4791-40EE-8C01-08C34E3733B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetcharr.Benchmark.Test", "Fetcharr.Benchmark.Test\Fetcharr.Benchmark.Test.csproj", "{56B0D244-4791-40EE-8C01-08C34E3733B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

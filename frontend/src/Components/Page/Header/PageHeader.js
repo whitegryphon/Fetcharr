@@ -55,8 +55,8 @@ class PageHeader extends Component {
           <Link to={'/'}>
             <img
               className={styles.logo}
-              src={`${window.Prowlarr.urlBase}/Content/Images/logo.png`}
-              alt="Prowlarr Logo"
+              src={`${window.Fetcharr.urlBase}/Content/Images/logo.png`}
+              alt="Fetcharr Logo"
             />
           </Link>
         </div>
@@ -76,7 +76,7 @@ class PageHeader extends Component {
             className={styles.donate}
             name={icons.HEART}
             aria-label="Donate"
-            to="https://prowlarr.com/donate"
+            to="https://fetcharr.com/donate"
             size={14}
             title={translate('Donate')}
           />
@@ -84,7 +84,7 @@ class PageHeader extends Component {
             className={styles.translate}
             title={translate('SuggestTranslationChange')}
             name={icons.TRANSLATE}
-            to="https://translate.servarr.com/projects/servarr/prowlarr/"
+            to="https://translate.servarr.com/projects/servarr/fetcharr/"
             size={24}
           />
           <PageHeaderActionsMenuConnector

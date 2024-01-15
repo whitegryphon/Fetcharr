@@ -60,12 +60,12 @@ namespace NzbDrone.Core.Applications.Lidarr
                         failures.AddIfNotNull(new ValidationFailure("ApiKey", "API Key is invalid"));
                         break;
                     case HttpStatusCode.BadRequest:
-                        _logger.Warn(ex, "Prowlarr URL is invalid");
-                        failures.AddIfNotNull(new ValidationFailure("ProwlarrUrl", "Prowlarr URL is invalid, Lidarr cannot connect to Prowlarr"));
+                        _logger.Warn(ex, "Fetcharr URL is invalid");
+                        failures.AddIfNotNull(new ValidationFailure("FetcharrUrl", "Fetcharr URL is invalid, Lidarr cannot connect to Fetcharr"));
                         break;
                     case HttpStatusCode.SeeOther:
                         _logger.Warn(ex, "Lidarr returned redirect and is invalid");
-                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Lidarr URL is invalid, Prowlarr cannot connect to Lidarr - are you missing a URL base?"));
+                        failures.AddIfNotNull(new ValidationFailure("BaseUrl", "Lidarr URL is invalid, Fetcharr cannot connect to Lidarr - are you missing a URL base?"));
                         break;
                     default:
                         _logger.Warn(ex, "Unable to complete application test");
@@ -98,7 +98,7 @@ namespace NzbDrone.Core.Applications.Lidarr
             {
                 var baseUrl = (string)indexer.Fields.FirstOrDefault(x => x.Name == "baseUrl")?.Value ?? string.Empty;
 
-                if (!baseUrl.StartsWith(Settings.ProwlarrUrl.TrimEnd('/')) &&
+                if (!baseUrl.StartsWith(Settings.FetcharrUrl.TrimEnd('/')) &&
                     (string)indexer.Fields.FirstOrDefault(x => x.Name == "apiKey")?.Value != _configFileProvider.ApiKey)
                 {
                     continue;
@@ -108,7 +108,7 @@ namespace NzbDrone.Core.Applications.Lidarr
 
                 if (match.Groups["indexer"].Success && int.TryParse(match.Groups["indexer"].Value, out var indexerId))
                 {
-                    // Add parsed mapping if it's mapped to a Indexer in this Prowlarr instance
+                    // Add parsed mapping if it's mapped to a Indexer in this Fetcharr instance
                     mappings.Add(new AppIndexerMap { IndexerId = indexerId, RemoteIndexerId = indexer.Id });
                 }
             }
@@ -176,13 +176,13 @@ namespace NzbDrone.Core.Applications.Lidarr
 
                     if (indexer.Capabilities.Categories.SupportedCategories(Settings.SyncCategories.ToArray()).Any())
                     {
-                        // Retain user fields not-affiliated with Prowlarr
+                        // Retain user fields not-affiliated with Fetcharr
                         lidarrIndexer.Fields.AddRange(remoteIndexer.Fields.Where(f => lidarrIndexer.Fields.All(s => s.Name != f.Name)));
 
-                        // Retain user tags not-affiliated with Prowlarr
+                        // Retain user tags not-affiliated with Fetcharr
                         lidarrIndexer.Tags.UnionWith(remoteIndexer.Tags);
 
-                        // Retain user settings not-affiliated with Prowlarr
+                        // Retain user settings not-affiliated with Fetcharr
                         lidarrIndexer.DownloadClientId = remoteIndexer.DownloadClientId;
 
                         // Update the indexer if it still has categories that match
@@ -234,7 +234,7 @@ namespace NzbDrone.Core.Applications.Lidarr
             var lidarrIndexer = new LidarrIndexer
             {
                 Id = id,
-                Name = $"{indexer.Name} (Prowlarr)",
+                Name = $"{indexer.Name} (Fetcharr)",
                 EnableRss = indexer.Enable && indexer.AppProfile.Value.EnableRss,
                 EnableAutomaticSearch = indexer.Enable && indexer.AppProfile.Value.EnableAutomaticSearch,
                 EnableInteractiveSearch = indexer.Enable && indexer.AppProfile.Value.EnableInteractiveSearch,
@@ -247,7 +247,7 @@ namespace NzbDrone.Core.Applications.Lidarr
 
             lidarrIndexer.Fields.AddRange(schema.Fields.Where(x => syncFields.Contains(x.Name)));
 
-            lidarrIndexer.Fields.FirstOrDefault(x => x.Name == "baseUrl").Value = $"{Settings.ProwlarrUrl.TrimEnd('/')}/{indexer.Id}/";
+            lidarrIndexer.Fields.FirstOrDefault(x => x.Name == "baseUrl").Value = $"{Settings.FetcharrUrl.TrimEnd('/')}/{indexer.Id}/";
             lidarrIndexer.Fields.FirstOrDefault(x => x.Name == "apiPath").Value = "/api";
             lidarrIndexer.Fields.FirstOrDefault(x => x.Name == "apiKey").Value = _configFileProvider.ApiKey;
             lidarrIndexer.Fields.FirstOrDefault(x => x.Name == "categories").Value = JArray.FromObject(indexer.Capabilities.Categories.SupportedCategories(Settings.SyncCategories.ToArray()));

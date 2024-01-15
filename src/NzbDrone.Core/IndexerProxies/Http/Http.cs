@@ -8,7 +8,7 @@ namespace NzbDrone.Core.IndexerProxies.Http
 {
     public class Http : HttpIndexerProxyBase<HttpSettings>
     {
-        public Http(IProwlarrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
+        public Http(IFetcharrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
             : base(cloudRequestBuilder, httpClient, logger, localizationService)
         {
         }

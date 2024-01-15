@@ -58,7 +58,7 @@ class HistoryRowConnector extends Component {
       searchLimit: limit,
       searchOffset: offset
     }));
-    this.props.push(`${window.Prowlarr.urlBase}/search`);
+    this.props.push(`${window.Fetcharr.urlBase}/search`);
   };
 
   onMarkAsFailedPress = () => {

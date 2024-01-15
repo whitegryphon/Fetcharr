@@ -3,10 +3,10 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Profiles;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Profiles.App
+namespace Fetcharr.Api.V1.Profiles.App
 {
     [V1ApiController]
     public class AppProfileController : RestController<AppProfileResource>

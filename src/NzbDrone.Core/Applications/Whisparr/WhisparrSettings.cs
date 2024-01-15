@@ -11,7 +11,7 @@ namespace NzbDrone.Core.Applications.Whisparr
         public WhisparrSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).IsValidUrl();
-            RuleFor(c => c.ProwlarrUrl).IsValidUrl();
+            RuleFor(c => c.FetcharrUrl).IsValidUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
             RuleFor(c => c.SyncCategories).NotEmpty();
         }
@@ -23,13 +23,13 @@ namespace NzbDrone.Core.Applications.Whisparr
 
         public WhisparrSettings()
         {
-            ProwlarrUrl = "http://localhost:9696";
+            FetcharrUrl = "http://localhost:9696";
             BaseUrl = "http://localhost:6969";
             SyncCategories = new[] { 6000, 6010, 6020, 6030, 6040, 6045, 6050, 6070, 6080, 6090 };
         }
 
-        [FieldDefinition(0, Label = "Prowlarr Server", HelpText = "Prowlarr server URL as Whisparr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
-        public string ProwlarrUrl { get; set; }
+        [FieldDefinition(0, Label = "Fetcharr Server", HelpText = "Fetcharr server URL as Whisparr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
+        public string FetcharrUrl { get; set; }
 
         [FieldDefinition(1, Label = "Whisparr Server", HelpText = "URL used to connect to Whisparr server, including http(s)://, port, and urlbase if required", Placeholder = "http://localhost:6969")]
         public string BaseUrl { get; set; }

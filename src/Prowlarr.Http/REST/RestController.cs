@@ -11,9 +11,9 @@ using NLog;
 using NzbDrone.Common.Instrumentation;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http.Validation;
+using Fetcharr.Http.Validation;
 
-namespace Prowlarr.Http.REST
+namespace Fetcharr.Http.REST
 {
     public abstract class RestController<TResource> : Controller
         where TResource : RestResource, new()

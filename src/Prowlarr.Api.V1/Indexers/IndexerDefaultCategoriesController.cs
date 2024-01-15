@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Indexers;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
 namespace NzbDrone.Api.V1.Indexers
 {

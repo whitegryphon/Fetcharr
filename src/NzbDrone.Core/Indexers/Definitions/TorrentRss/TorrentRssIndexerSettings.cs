@@ -25,7 +25,7 @@ namespace NzbDrone.Core.Indexers.Definitions.TorrentRss
             AllowZeroSize = false;
         }
 
-        [FieldDefinition(0, Label = "Full RSS Feed URL", HelpTextWarning = "To sync to your apps you will need to include the 8000(Other) in the Sync Categories", HelpLink = "https://wiki.servarr.com/en/prowlarr/faq#can-i-add-any-generic-torrent-rss-feed")]
+        [FieldDefinition(0, Label = "Full RSS Feed URL", HelpTextWarning = "To sync to your apps you will need to include the 8000(Other) in the Sync Categories", HelpLink = "https://wiki.servarr.com/en/fetcharr/faq#can-i-add-any-generic-torrent-rss-feed")]
         public string BaseUrl { get; set; }
 
         [FieldDefinition(1, Label = "Cookie", HelpText = "If your site requires a login cookie to access the RSS, you'll have to retrieve it via a browser.", HelpLink = "https://wiki.servarr.com/useful-tools#finding-cookies")]

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     [AllowAnonymous]
     [ApiController]

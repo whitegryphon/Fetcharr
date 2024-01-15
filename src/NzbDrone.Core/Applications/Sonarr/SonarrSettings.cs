@@ -11,7 +11,7 @@ namespace NzbDrone.Core.Applications.Sonarr
         public SonarrSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).IsValidUrl();
-            RuleFor(c => c.ProwlarrUrl).IsValidUrl();
+            RuleFor(c => c.FetcharrUrl).IsValidUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
         }
     }
@@ -22,14 +22,14 @@ namespace NzbDrone.Core.Applications.Sonarr
 
         public SonarrSettings()
         {
-            ProwlarrUrl = "http://localhost:9696";
+            FetcharrUrl = "http://localhost:9696";
             BaseUrl = "http://localhost:8989";
             SyncCategories = new[] { 5000, 5010, 5020, 5030, 5040, 5045, 5050, 5090 };
             AnimeSyncCategories = new[] { 5070 };
         }
 
-        [FieldDefinition(0, Label = "Prowlarr Server", HelpText = "Prowlarr server URL as Sonarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
-        public string ProwlarrUrl { get; set; }
+        [FieldDefinition(0, Label = "Fetcharr Server", HelpText = "Fetcharr server URL as Sonarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
+        public string FetcharrUrl { get; set; }
 
         [FieldDefinition(1, Label = "Sonarr Server", HelpText = "URL used to connect to Sonarr server, including http(s)://, port, and urlbase if required", Placeholder = "http://localhost:8989")]
         public string BaseUrl { get; set; }

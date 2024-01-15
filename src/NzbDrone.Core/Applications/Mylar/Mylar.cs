@@ -54,7 +54,7 @@ namespace NzbDrone.Core.Applications.Mylar
 
                     if (match.Groups["indexer"].Success && int.TryParse(match.Groups["indexer"].Value, out var indexerId))
                     {
-                        // Add parsed mapping if it's mapped to a Indexer in this Prowlarr instance
+                        // Add parsed mapping if it's mapped to a Indexer in this Fetcharr instance
                         mappings.Add(new AppIndexerMap { IndexerId = indexerId, RemoteIndexerName = $"{indexer.Type},{indexer.Name}" });
                     }
                 }
@@ -113,7 +113,7 @@ namespace NzbDrone.Core.Applications.Mylar
 
             var mylarIndexer = BuildMylarIndexer(indexer, indexer.Protocol, indexerProps[1]);
 
-            //Use the old remote id to find the indexer on Mylar incase the update was from a name change in Prowlarr
+            //Use the old remote id to find the indexer on Mylar incase the update was from a name change in Fetcharr
             var remoteIndexer = _mylarV3Proxy.GetIndexer(indexerProps[1], mylarIndexer.Type, Settings);
 
             if (remoteIndexer != null)
@@ -152,9 +152,9 @@ namespace NzbDrone.Core.Applications.Mylar
 
             var mylarIndexer = new MylarIndexer
             {
-                Name = originalName ?? $"{indexer.Name} (Prowlarr)",
-                Altername = $"{indexer.Name} (Prowlarr)",
-                Host = $"{Settings.ProwlarrUrl.TrimEnd('/')}/{indexer.Id}/api",
+                Name = originalName ?? $"{indexer.Name} (Fetcharr)",
+                Altername = $"{indexer.Name} (Fetcharr)",
+                Host = $"{Settings.FetcharrUrl.TrimEnd('/')}/{indexer.Id}/api",
                 Apikey = _configFileProvider.ApiKey,
                 Categories = string.Join(",", indexer.Capabilities.Categories.SupportedCategories(Settings.SyncCategories.ToArray())),
                 Enabled = indexer.Enable,

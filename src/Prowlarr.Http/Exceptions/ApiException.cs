@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 
-namespace Prowlarr.Http.Exceptions
+namespace Fetcharr.Http.Exceptions
 {
     public abstract class ApiException : Exception
     {

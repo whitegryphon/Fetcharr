@@ -101,7 +101,7 @@ public class SpeedCD : TorrentIndexerBase<SpeedCDSettings>
 
             if (response.Content.Contains("Wrong Captcha!"))
             {
-                errorMessage = "Captcha required due to a failed login attempt. Login via a browser to whitelist your IP and then reconfigure Prowlarr.";
+                errorMessage = "Captcha required due to a failed login attempt. Login via a browser to whitelist your IP and then reconfigure Fetcharr.";
             }
 
             throw new IndexerAuthException(errorMessage ?? "Unknown error message, please report.");

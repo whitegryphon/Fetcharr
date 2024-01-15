@@ -6,9 +6,9 @@
     <PackageReference Include="Mono.Posix.NETStandard" Version="5.20.1.34-servarr20" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common.Test\Prowlarr.Common.Test.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Prowlarr.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Mono\Prowlarr.Mono.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common.Test\Fetcharr.Common.Test.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Fetcharr.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Mono\Fetcharr.Mono.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Files\**\*.*">

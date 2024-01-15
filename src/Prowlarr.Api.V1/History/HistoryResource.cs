@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using NzbDrone.Core.History;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.History
+namespace Fetcharr.Api.V1.History
 {
     public class HistoryResource : RestResource
     {

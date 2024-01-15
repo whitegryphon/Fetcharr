@@ -5,9 +5,9 @@ using System.Text.Json.Serialization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.Messaging.Commands;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Commands
+namespace Fetcharr.Api.V1.Commands
 {
     public class CommandResource : RestResource
     {

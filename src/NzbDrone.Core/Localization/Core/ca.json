@@ -377,7 +377,7 @@
     "DisabledForLocalAddresses": "Desactivat per a adreces locals",
     "None": "Cap",
     "ResetAPIKeyMessageText": "Esteu segur que voleu restablir la clau de l'API?",
-    "RestartProwlarr": "Reinicia {appName}",
+    "RestartFetcharr": "Reinicia {appName}",
     "AuthenticationRequired": "Autenticació necessària",
     "CountDownloadClientsSelected": "{count} client(s) de baixada seleccionat(s)",
     "NoDownloadClientsFound": "No s'han trobat clients de baixada",

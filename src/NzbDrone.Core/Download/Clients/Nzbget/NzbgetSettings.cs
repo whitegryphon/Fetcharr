@@ -29,7 +29,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
         {
             Host = "localhost";
             Port = 6789;
-            Category = "Prowlarr";
+            Category = "Fetcharr";
             Username = "nzbget";
             Password = "tegbzn6789";
             Priority = (int)NzbgetPriority.Normal;
@@ -53,10 +53,10 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
         [FieldDefinition(5, Label = "Password", Type = FieldType.Password, Privacy = PrivacyLevel.Password)]
         public string Password { get; set; }
 
-        [FieldDefinition(6, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Default fallback category if no mapped category exists for a release. Adding a category specific to Prowlarr avoids conflicts with unrelated downloads, but it's optional")]
+        [FieldDefinition(6, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Default fallback category if no mapped category exists for a release. Adding a category specific to Fetcharr avoids conflicts with unrelated downloads, but it's optional")]
         public string Category { get; set; }
 
-        [FieldDefinition(7, Label = "Priority", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), HelpText = "Priority for items added from Prowlarr")]
+        [FieldDefinition(7, Label = "Priority", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), HelpText = "Priority for items added from Fetcharr")]
         public int Priority { get; set; }
 
         [FieldDefinition(8, Label = "Add Paused", Type = FieldType.Checkbox, HelpText = "This option requires at least NZBGet version 16.0")]

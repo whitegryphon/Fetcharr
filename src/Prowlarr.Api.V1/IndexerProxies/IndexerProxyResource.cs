@@ -1,6 +1,6 @@
 using NzbDrone.Core.IndexerProxies;
 
-namespace Prowlarr.Api.V1.IndexerProxies
+namespace Fetcharr.Api.V1.IndexerProxies
 {
     public class IndexerProxyResource : ProviderResource<IndexerProxyResource>
     {

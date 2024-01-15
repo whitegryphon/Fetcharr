@@ -20,8 +20,8 @@ namespace NzbDrone.Common.Composition
         public static IList<Assembly> Load(IList<string> assemblyNames)
         {
             var toLoad = assemblyNames.ToList();
-            toLoad.Add("Prowlarr.Common");
-            toLoad.Add(OsInfo.IsWindows ? "Prowlarr.Windows" : "Prowlarr.Mono");
+            toLoad.Add("Fetcharr.Common");
+            toLoad.Add(OsInfo.IsWindows ? "Fetcharr.Windows" : "Fetcharr.Mono");
 
             var startupPath = AppDomain.CurrentDomain.BaseDirectory;
 

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Tags;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Tags
+namespace Fetcharr.Api.V1.Tags
 {
     public class TagResource : RestResource
     {

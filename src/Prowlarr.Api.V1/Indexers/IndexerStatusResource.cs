@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Indexers;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Indexers
+namespace Fetcharr.Api.V1.Indexers
 {
     public class IndexerStatusResource : RestResource
     {

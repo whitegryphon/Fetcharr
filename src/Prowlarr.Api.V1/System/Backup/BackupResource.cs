@@ -1,8 +1,8 @@
 using System;
 using NzbDrone.Core.Backup;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.System.Backup
+namespace Fetcharr.Api.V1.System.Backup
 {
     public class BackupResource : RestResource
     {

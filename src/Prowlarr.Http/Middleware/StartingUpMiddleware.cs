@@ -3,13 +3,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Serializer;
-using Prowlarr.Http.Extensions;
+using Fetcharr.Http.Extensions;
 
-namespace Prowlarr.Http.Middleware
+namespace Fetcharr.Http.Middleware
 {
     public class StartingUpMiddleware
     {
-        private const string MESSAGE = "Prowlarr is starting up, please try again later";
+        private const string MESSAGE = "Fetcharr is starting up, please try again later";
         private readonly RequestDelegate _next;
         private readonly IRuntimeInfo _runtimeInfo;
 

@@ -3,9 +3,9 @@ using System.Dynamic;
 using System.Linq;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.CustomFilters;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.CustomFilters
+namespace Fetcharr.Api.V1.CustomFilters
 {
     public class CustomFilterResource : RestResource
     {

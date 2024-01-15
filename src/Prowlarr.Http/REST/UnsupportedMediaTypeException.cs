@@ -1,7 +1,7 @@
 using System.Net;
-using Prowlarr.Http.Exceptions;
+using Fetcharr.Http.Exceptions;
 
-namespace Prowlarr.Http.REST
+namespace Fetcharr.Http.REST
 {
     public class UnsupportedMediaTypeException : ApiException
     {

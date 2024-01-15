@@ -2,17 +2,17 @@ using NzbDrone.Common.Http;
 
 namespace NzbDrone.Common.Cloud
 {
-    public interface IProwlarrCloudRequestBuilder
+    public interface IFetcharrCloudRequestBuilder
     {
         IHttpRequestBuilderFactory Services { get; }
         IHttpRequestBuilderFactory Releases { get; }
     }
 
-    public class ProwlarrCloudRequestBuilder : IProwlarrCloudRequestBuilder
+    public class FetcharrCloudRequestBuilder : IFetcharrCloudRequestBuilder
     {
-        public ProwlarrCloudRequestBuilder()
+        public FetcharrCloudRequestBuilder()
         {
-            Services = new HttpRequestBuilder("https://prowlarr.servarr.com/v1/")
+            Services = new HttpRequestBuilder("https://fetcharr.servarr.com/v1/")
                 .CreateFactory();
 
             Releases = new HttpRequestBuilder("https://releases.servarr.com/v1/")

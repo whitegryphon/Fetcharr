@@ -8,10 +8,10 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Backup;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.System.Backup
+namespace Fetcharr.Api.V1.System.Backup
 {
     [V1ApiController("system/backup")]
     public class BackupController : Controller
@@ -108,7 +108,7 @@ namespace Prowlarr.Api.V1.System.Backup
                 throw new UnsupportedMediaTypeException($"Invalid extension, must be one of: {ValidExtensions.Join(", ")}");
             }
 
-            var path = Path.Combine(_appFolderInfo.TempFolder, $"prowlarr_backup_restore{extension}");
+            var path = Path.Combine(_appFolderInfo.TempFolder, $"fetcharr_backup_restore{extension}");
 
             _diskProvider.SaveStream(file.OpenReadStream(), path);
             _backupService.Restore(path);

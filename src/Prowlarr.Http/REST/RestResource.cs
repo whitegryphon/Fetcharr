@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Prowlarr.Http.REST
+namespace Fetcharr.Http.REST
 {
     public abstract class RestResource
     {

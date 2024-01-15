@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.CustomFilters;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.CustomFilters
+namespace Fetcharr.Api.V1.CustomFilters
 {
     [V1ApiController]
     public class CustomFilterController : RestController<CustomFilterResource>

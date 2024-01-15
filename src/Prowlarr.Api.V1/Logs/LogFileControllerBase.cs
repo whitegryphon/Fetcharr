@@ -6,7 +6,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Core.Configuration;
 
-namespace Prowlarr.Api.V1.Logs
+namespace Fetcharr.Api.V1.Logs
 {
     public abstract class LogFileControllerBase : Controller
     {

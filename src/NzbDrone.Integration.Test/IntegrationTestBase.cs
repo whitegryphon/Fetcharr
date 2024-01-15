@@ -14,10 +14,10 @@ using NzbDrone.Common.Processes;
 using NzbDrone.Integration.Test.Client;
 using NzbDrone.SignalR;
 using NzbDrone.Test.Common.Categories;
-using Prowlarr.Api.V1.Config;
-using Prowlarr.Api.V1.History;
-using Prowlarr.Api.V1.System.Tasks;
-using Prowlarr.Api.V1.Tags;
+using Fetcharr.Api.V1.Config;
+using Fetcharr.Api.V1.History;
+using Fetcharr.Api.V1.System.Tasks;
+using Fetcharr.Api.V1.Tags;
 using RestSharp;
 using RestSharp.Serializers.SystemTextJson;
 

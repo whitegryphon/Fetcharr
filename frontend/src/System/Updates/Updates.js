@@ -45,9 +45,9 @@ class Updates extends Component {
     const hasUpdateToInstall = hasUpdates && _.some(items, { installable: true, latest: true });
     const noUpdateToInstall = hasUpdates && !hasUpdateToInstall;
 
-    const externalUpdaterPrefix = 'Unable to update Prowlarr directly,';
+    const externalUpdaterPrefix = 'Unable to update Fetcharr directly,';
     const externalUpdaterMessages = {
-      external: 'Prowlarr is configured to use an external update mechanism',
+      external: 'Fetcharr is configured to use an external update mechanism',
       apt: 'use apt to install the update',
       docker: 'update the docker container to receive the update'
     };

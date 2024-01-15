@@ -21,7 +21,7 @@ using NzbDrone.Core.Parser.Model;
 
 namespace NzbDrone.Core.Indexers.Definitions
 {
-    [Obsolete("Remove per Site Request Prowlarr Issue 573")]
+    [Obsolete("Remove per Site Request Fetcharr Issue 573")]
     public class TVVault : TorrentIndexerBase<UserPassTorrentBaseSettings>
     {
         public override string Name => "TVVault";

@@ -488,7 +488,7 @@ namespace NzbDrone.Core.Indexers.Definitions
                 .CombinePath("/torrents.php")
                 .AddQueryParam("action", "download")
                 .AddQueryParam("id", torrentId)
-                .AddQueryParam("authkey", "prowlarr")
+                .AddQueryParam("authkey", "fetcharr")
                 .AddQueryParam("torrent_pass", _settings.Passkey);
 
             return url.FullUri;

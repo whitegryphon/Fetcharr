@@ -6,9 +6,9 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.IndexerStats;
 using NzbDrone.Core.Tags;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Indexers
+namespace Fetcharr.Api.V1.Indexers
 {
     [V1ApiController]
     public class IndexerStatsController : Controller

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NzbDrone.Core.Authentication;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     public class NoAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

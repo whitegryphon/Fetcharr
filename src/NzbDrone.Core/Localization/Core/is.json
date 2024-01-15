@@ -353,5 +353,5 @@
     "DisabledForLocalAddresses": "Óvirkt vegna heimilisfanga",
     "None": "Enginn",
     "ResetAPIKeyMessageText": "Ertu viss um að þú viljir endurstilla API lykilinn þinn?",
-    "RestartProwlarr": "Endurræstu {appName}"
+    "RestartFetcharr": "Endurræstu {appName}"
 }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Applications;
 
-namespace Prowlarr.Api.V1.Applications
+namespace Fetcharr.Api.V1.Applications
 {
     public class ApplicationBulkResource : ProviderBulkResource<ApplicationBulkResource>
     {

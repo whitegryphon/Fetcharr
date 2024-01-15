@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Prowlarr.Api.V1.Notifications;
+using Fetcharr.Api.V1.Notifications;
 using RestSharp;
 
 namespace NzbDrone.Integration.Test.Client

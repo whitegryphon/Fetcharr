@@ -3,9 +3,9 @@ using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     public abstract class ConfigController<TResource> : RestController<TResource>
         where TResource : RestResource, new()

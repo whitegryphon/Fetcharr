@@ -1,70 +1,59 @@
-# Prowlarr
+# Fetcharr
 
-[![Build Status](https://dev.azure.com/Prowlarr/Prowlarr/_apis/build/status/Prowlarr.Prowlarr?branchName=develop)](https://dev.azure.com/Prowlarr/Prowlarr/_build/latest?definitionId=1&branchName=develop)
-[![Translated](https://translate.servarr.com/widgets/servarr/-/prowlarr/svg-badge.svg)](https://translate.servarr.com/engage/prowlarr/?utm_source=widget)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/prowlarr.svg)](https://wiki.servarr.com/prowlarr/installation/docker)
-![Github Downloads](https://img.shields.io/github/downloads/Prowlarr/Prowlarr/total.svg)
-[![Backers on Open Collective](https://opencollective.com/Prowlarr/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/Prowlarr/sponsors/badge.svg)](#sponsors)
-[![Mega Sponsors on Open Collective](https://opencollective.com/Prowlarr/megasponsors/badge.svg)](#mega-sponsors)
+[![Build Status](https://dev.azure.com/Fetcharr/Fetcharr/_apis/build/status/Fetcharr.Fetcharr?branchName=develop)](https://dev.azure.com/Fetcharr/Fetcharr/_build/latest?definitionId=1&branchName=develop)
+[![Translated](https://translate.servarr.com/widgets/servarr/-/Fetcharr/svg-badge.svg)](https://translate.servarr.com/engage/Fetcharr/?utm_source=widget)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/Fetcharr.svg)](https://wiki.servarr.com/Fetcharr/installation/docker)
+![Github Downloads](https://img.shields.io/github/downloads/Fetcharr/Fetcharr/total.svg)
+[![Backers on Open Collective](https://opencollective.com/Fetcharr/backers/badge.svg)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/Fetcharr/sponsors/badge.svg)](#sponsors)
+[![Mega Sponsors on Open Collective](https://opencollective.com/Fetcharr/megasponsors/badge.svg)](#mega-sponsors)
 
-Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+Fetcharr is an indexer manager/proxy built on the popular \*arr .net/reactjs base stack to integrate with your various PVR apps. Fetcharr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
 ## Major Features Include
 
-- Usenet support for 24 indexers natively, including Headphones VIP
-- Usenet support for any Newznab compatible indexer via "Generic Newznab"
-- Torrent support for over 500 trackers with more added all the time
-- Torrent support for any Torznab compatible tracker via "Generic Torznab"
-- Support for custom YML definitions via Cardigann that includes JSON and XML parsing
-- Indexer Sync to Lidarr/Mylar3/Radarr/Readarr/Sonarr, so no manual configuration of the other applications are required
-- Indexer history and statistics
-- Manual searching of Trackers & Indexers at a category level
-- Parameter based manual searching
-- Support for pushing multiple releases at once directly to your download clients from Prowlarr
-- Indexer health and status notifications
-- Per Indexer proxy support (SOCKS4, SOCKS5, HTTP, Flaresolverr)
+- 
 
 ## Support
 
-[![Wiki](https://img.shields.io/badge/servarr-wiki-181717.svg?maxAge=60)](https://wiki.servarr.com/prowlarr)
-[![Discord](https://img.shields.io/badge/discord-chat-7289DA.svg?maxAge=60)](https://prowlarr.com/discord)
+[![Wiki](https://img.shields.io/badge/servarr-wiki-181717.svg?maxAge=60)](https://wiki.servarr.com/Fetcharr)
+[![Discord](https://img.shields.io/badge/discord-chat-7289DA.svg?maxAge=60)](https://Fetcharr.com/discord)
 
 Note: GitHub Issues are for Bugs and Feature Requests Only
 
-[![GitHub - Bugs and Feature Requests Only](https://img.shields.io/badge/github-issues-red.svg?maxAge=60)](https://github.com/Prowlarr/Prowlarr/issues)
+[![GitHub - Bugs and Feature Requests Only](https://img.shields.io/badge/github-issues-red.svg?maxAge=60)](https://github.com/Fetcharr/Fetcharr/issues)
 
 ## Indexers & Trackers
 
-[![Supported Indexers](https://img.shields.io/badge/Supported%20Indexers-View%20all%20currently%20supported%20indexers%20%26%20trackers-important)](https://wiki.servarr.com/en/prowlarr/supported-indexers)
+[![Supported Indexers](https://img.shields.io/badge/Supported%20Indexers-View%20all%20currently%20supported%20indexers%20%26%20trackers-important)](https://wiki.servarr.com/en/Fetcharr/supported-indexers)
 
-[![Indexer Requests](https://img.shields.io/badge/Indexer%20Requests-Create%20and%20view%20existing%20requests%20for%20trackers%20and%20indexers-informational)](https://requests.prowlarr.com)
+[![Indexer Requests](https://img.shields.io/badge/Indexer%20Requests-Create%20and%20view%20existing%20requests%20for%20trackers%20and%20indexers-informational)](https://requests.Fetcharr.com)
 
 ## Contributors & Developers
 
-[API Documentation](https://prowlarr.com/docs/api/)
+[API Documentation](https://Fetcharr.com/docs/api/)
 
 This project exists thanks to all the people who contribute.
 
 - [Contribute (GitHub)](CONTRIBUTING.md)
-- [Contribution (Wiki Article)](https://wiki.servarr.com/prowlarr/contributing)
-- [YML Indexer Definition (Wiki Article)](https://wiki.servarr.com/prowlarr/cardigann-yml-definition)
+- [Contribution (Wiki Article)](https://wiki.servarr.com/Fetcharr/contributing)
+- [YML Indexer Definition (Wiki Article)](https://wiki.servarr.com/Fetcharr/cardigann-yml-definition)
 
-[![Contributors List](https://opencollective.com/Prowlarr/contributors.svg?width=890&button=false)](https://github.com/Prowlarr/Prowlarr/graphs/contributors)
+[![Contributors List](https://opencollective.com/Fetcharr/contributors.svg?width=890&button=false)](https://github.com/Fetcharr/Fetcharr/graphs/contributors)
 
 ## Backers
 
-Thank you to all our backers! 🙏 [Become a backer](https://opencollective.com/Prowlarr#backer)
-![Backers List](https://opencollective.com/Prowlarr/backers.svg?width=890)
+Thank you to all our backers! 🙏 [Become a backer](https://opencollective.com/Fetcharr#backer)
+![Backers List](https://opencollective.com/Fetcharr/backers.svg?width=890)
 
 ## Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [Become a sponsor](https://opencollective.com/Prowlarr#sponsor)
-![Sponsors List](https://opencollective.com/Prowlarr/sponsors.svg?width=890)
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [Become a sponsor](https://opencollective.com/Fetcharr#sponsor)
+![Sponsors List](https://opencollective.com/Fetcharr/sponsors.svg?width=890)
 
 ## Mega Sponsors
 
-![Mega Sponsors List](https://opencollective.com/Prowlarr/tiers/mega-sponsor.svg?width=890)
+![Mega Sponsors List](https://opencollective.com/Fetcharr/tiers/mega-sponsor.svg?width=890)
 
 ## JetBrains
 

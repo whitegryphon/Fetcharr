@@ -4,7 +4,7 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Update;
 
-namespace Prowlarr.Api.V1.System
+namespace Fetcharr.Api.V1.System
 {
     public class SystemResource
     {

@@ -168,11 +168,11 @@ namespace NzbDrone.Test.Common.AutoMoq
 
         private void LoadPlatformLibrary()
         {
-            var assemblyName = "Prowlarr.Windows";
+            var assemblyName = "Fetcharr.Windows";
 
             if (OsInfo.IsNotWindows)
             {
-                assemblyName = "Prowlarr.Mono";
+                assemblyName = "Fetcharr.Mono";
             }
 
             if (!File.Exists(assemblyName + ".dll"))

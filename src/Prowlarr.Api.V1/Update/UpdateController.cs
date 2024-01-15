@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Update;
 using NzbDrone.Core.Update.History;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Update
+namespace Fetcharr.Api.V1.Update
 {
     [V1ApiController]
     public class UpdateController : Controller

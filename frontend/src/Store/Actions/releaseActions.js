@@ -336,7 +336,7 @@ export const actionHandlers = handleThunks({
       url: link,
       method: 'GET',
       headers: {
-        'X-Prowlarr-Client': true
+        'X-Fetcharr-Client': true
       },
       xhrFields: {
         responseType: 'blob'

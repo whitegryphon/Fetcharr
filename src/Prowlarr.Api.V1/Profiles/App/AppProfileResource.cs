@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Profiles;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Profiles.App
+namespace Fetcharr.Api.V1.Profiles.App
 {
     public class AppProfileResource : RestResource
     {

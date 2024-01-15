@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Download;
 
-namespace Prowlarr.Api.V1.DownloadClient
+namespace Fetcharr.Api.V1.DownloadClient
 {
     public class DownloadClientBulkResource : ProviderBulkResource<DownloadClientBulkResource>
     {

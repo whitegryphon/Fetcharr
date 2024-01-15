@@ -7,9 +7,9 @@ using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Indexers.Definitions.Cardigann;
 using NzbDrone.Core.IndexerVersions;
 using NzbDrone.Core.Parser;
-using Prowlarr.Http.ClientSchema;
+using Fetcharr.Http.ClientSchema;
 
-namespace Prowlarr.Api.V1.Indexers
+namespace Fetcharr.Api.V1.Indexers
 {
     public class IndexerResource : ProviderResource<IndexerResource>
     {
@@ -80,7 +80,7 @@ namespace Prowlarr.Api.V1.Indexers
                 infoLinkName = settings.DefinitionFile;
             }
 
-            resource.InfoLink = $"https://wiki.servarr.com/prowlarr/supported-indexers#{infoLinkName.ToLower().Replace(' ', '-')}";
+            resource.InfoLink = $"https://wiki.servarr.com/fetcharr/supported-indexers#{infoLinkName.ToLower().Replace(' ', '-')}";
             resource.AppProfileId = definition.AppProfileId;
             resource.IndexerUrls = definition.IndexerUrls;
             resource.LegacyUrls = definition.LegacyUrls;

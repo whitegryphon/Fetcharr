@@ -1,7 +1,7 @@
 using System;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.System.Tasks
+namespace Fetcharr.Api.V1.System.Tasks
 {
     public class TaskResource : RestResource
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class ApiInfoResource
     {

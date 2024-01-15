@@ -5,27 +5,27 @@ using NLog;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Prowl
+namespace NzbDrone.Core.Notifications.Fetch
 {
-    public interface IProwlProxy
+    public interface IFetchProxy
     {
-        void SendNotification(string title, string message, ProwlSettings settings);
-        ValidationFailure Test(ProwlSettings settings);
+        void SendNotification(string title, string message, FetchSettings settings);
+        ValidationFailure Test(FetchSettings settings);
     }
 
-    public class ProwlProxy : IProwlProxy
+    public class FetchProxy : IFetchProxy
     {
-        private const string PUSH_URL = "https://api.prowlapp.com/publicapi/add";
+        private const string PUSH_URL = "https://api.Fetchapp.com/publicapi/add";
         private readonly IHttpClient _httpClient;
         private readonly Logger _logger;
 
-        public ProwlProxy(IHttpClient httpClient, Logger logger)
+        public FetchProxy(IHttpClient httpClient, Logger logger)
         {
             _httpClient = httpClient;
             _logger = logger;
         }
 
-        public void SendNotification(string title, string message, ProwlSettings settings)
+        public void SendNotification(string title, string message, FetchSettings settings)
         {
             try
             {
@@ -46,23 +46,23 @@ namespace NzbDrone.Core.Notifications.Prowl
                 if (ex.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     _logger.Error(ex, "Apikey is invalid: {0}", settings.ApiKey);
-                    throw new ProwlException("Apikey is invalid", ex);
+                    throw new FetchException("Apikey is invalid", ex);
                 }
 
-                throw new ProwlException("Unable to send text message: " + ex.Message, ex);
+                throw new FetchException("Unable to send text message: " + ex.Message, ex);
             }
             catch (WebException ex)
             {
-                throw new ProwlException("Failed to connect to prowl, please check your settings.", ex);
+                throw new FetchException("Failed to connect to Fetch, please check your settings.", ex);
             }
         }
 
-        public ValidationFailure Test(ProwlSettings settings)
+        public ValidationFailure Test(FetchSettings settings)
         {
             try
             {
                 const string title = "Test Notification";
-                const string body = "This is a test message from Prowlarr";
+                const string body = "This is a test message from Fetcharr";
 
                 SendNotification(title, body, settings);
             }

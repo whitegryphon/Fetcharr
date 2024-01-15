@@ -1187,7 +1187,7 @@ namespace NzbDrone.Core.Indexers.Definitions
             ApiKey = "";
         }
 
-        [FieldDefinition(1, Label = "Base Url", HelpText = "Select which baseurl Prowlarr will use for requests to the site", Type = FieldType.Select, SelectOptionsProviderAction = "getUrls")]
+        [FieldDefinition(1, Label = "Base Url", HelpText = "Select which baseurl Fetcharr will use for requests to the site", Type = FieldType.Select, SelectOptionsProviderAction = "getUrls")]
         public string BaseUrl { get; set; }
 
         [FieldDefinition(2, Label = "API Key", Privacy = PrivacyLevel.ApiKey, HelpText = "Site API Key")]

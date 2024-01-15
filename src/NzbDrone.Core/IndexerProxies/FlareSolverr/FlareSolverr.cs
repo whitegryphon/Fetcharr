@@ -23,7 +23,7 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
         private readonly ICached<string> _cache;
         private readonly IHttpProxySettingsProvider _proxySettingsProvider;
 
-        public FlareSolverr(IHttpProxySettingsProvider proxySettingsProvider, IProwlarrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService, ICacheManager cacheManager)
+        public FlareSolverr(IHttpProxySettingsProvider proxySettingsProvider, IFetcharrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService, ICacheManager cacheManager)
             : base(cloudRequestBuilder, httpClient, logger, localizationService)
         {
             _proxySettingsProvider = proxySettingsProvider;

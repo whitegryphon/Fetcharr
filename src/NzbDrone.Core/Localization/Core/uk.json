@@ -369,7 +369,7 @@
     "None": "Жодного",
     "ResetAPIKeyMessageText": "Ви впевнені, що хочете скинути свій ключ API?",
     "AddConnection": "Редагувати колекцію",
-    "RestartProwlarr": "Перезавантажити {appName}",
+    "RestartFetcharr": "Перезавантажити {appName}",
     "EditApplicationImplementation": "Додати умому",
     "EditConnectionImplementation": "Додати умому",
     "EditIndexerImplementation": "Додати умому",

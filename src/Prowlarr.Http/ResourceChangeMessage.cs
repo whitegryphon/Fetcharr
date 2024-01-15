@@ -1,8 +1,8 @@
 using System;
 using NzbDrone.Core.Datastore.Events;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class ResourceChangeMessage<TResource>
         where TResource : RestResource

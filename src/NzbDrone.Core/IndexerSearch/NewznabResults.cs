@@ -70,7 +70,7 @@ namespace NzbDrone.Core.IndexerSearch
                         new XElement(_AtomNs + "link",
                             new XAttribute("rel", "self"),
                             new XAttribute("type", "application/rss+xml")),
-                        new XElement("title", "Prowlarr"),
+                        new XElement("title", "Fetcharr"),
                         from r in Releases
                         let t = (r as TorrentInfo) ?? new TorrentInfo()
                         select new XElement("item",
@@ -78,7 +78,7 @@ namespace NzbDrone.Core.IndexerSearch
                             new XElement("description", RemoveInvalidXMLChars(r.Description)),
                             new XElement("guid", r.Guid), // GUID and (Link or Magnet) are mandatory
                             new XElement(
-                                "prowlarrindexer",
+                                "fetcharrindexer",
                                 new XAttribute("id", r.IndexerId),
                                 new XAttribute("type", r.IndexerPrivacy switch { IndexerPrivacy.Private => "private", IndexerPrivacy.Public => "public", _ => "semi-private" }),
                                 r.Indexer),

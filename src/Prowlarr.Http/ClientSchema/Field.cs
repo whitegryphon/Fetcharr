@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Annotations;
 
-namespace Prowlarr.Http.ClientSchema
+namespace Fetcharr.Http.ClientSchema
 {
     public class Field
     {

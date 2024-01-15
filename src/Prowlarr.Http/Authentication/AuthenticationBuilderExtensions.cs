@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using NzbDrone.Core.Authentication;
 
-namespace Prowlarr.Http.Authentication
+namespace Fetcharr.Http.Authentication
 {
     public static class AuthenticationBuilderExtensions
     {
@@ -35,7 +35,7 @@ namespace Prowlarr.Http.Authentication
                 .AddBasic(AuthenticationType.Basic.ToString())
                 .AddCookie(AuthenticationType.Forms.ToString(), options =>
                 {
-                    options.Cookie.Name = "ProwlarrAuth";
+                    options.Cookie.Name = "FetcharrAuth";
                     options.AccessDeniedPath = "/login?loginFailed=true";
                     options.LoginPath = "/login";
                     options.ExpireTimeSpan = TimeSpan.FromDays(7);

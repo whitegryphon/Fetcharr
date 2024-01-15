@@ -67,7 +67,7 @@ namespace NzbDrone.Core.Download.Clients.FreeboxDownload
         [FieldDefinition(6, Label = "Destination Directory", Type = FieldType.Textbox, Advanced = true, HelpText = "Optional location to put downloads in, leave blank to use the default Freebox download location")]
         public string DestinationDirectory { get; set; }
 
-        [FieldDefinition(7, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Adding a category specific to Prowlarr avoids conflicts with unrelated non-Prowlarr downloads (will create a [category] subdirectory in the output directory)")]
+        [FieldDefinition(7, Label = "Default Category", Type = FieldType.Textbox, HelpText = "Adding a category specific to Fetcharr avoids conflicts with unrelated non-Fetcharr downloads (will create a [category] subdirectory in the output directory)")]
         public string Category { get; set; }
 
         [FieldDefinition(8, Label = "Priority", Type = FieldType.Select, SelectOptions = typeof(FreeboxDownloadPriority), HelpText = "Priority to use when grabbing")]

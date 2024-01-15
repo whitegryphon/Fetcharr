@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.ThingiProvider;
 using NzbDrone.Core.Validation;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1
+namespace Fetcharr.Api.V1
 {
     public abstract class ProviderControllerBase<TProviderResource, TBulkProviderResource, TProvider, TProviderDefinition> : RestController<TProviderResource>
         where TProviderDefinition : ProviderDefinition, new()

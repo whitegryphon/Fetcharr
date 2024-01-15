@@ -36,7 +36,7 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
         public override string Name => "Custom Script";
 
-        public override string Link => "https://wiki.servarr.com/prowlarr/settings#connections";
+        public override string Link => "https://wiki.servarr.com/fetcharr/settings#connections";
 
         public override ProviderMessage Message => new ProviderMessage("Testing will execute the script with the EventType set to Test, ensure your script handles this correctly", ProviderMessageType.Warning);
 
@@ -44,13 +44,13 @@ namespace NzbDrone.Core.Notifications.CustomScript
         {
             var environmentVariables = new StringDictionary();
 
-            environmentVariables.Add("Prowlarr_EventType", "HealthIssue");
-            environmentVariables.Add("Prowlarr_InstanceName", _configFileProvider.InstanceName);
-            environmentVariables.Add("Prowlarr_ApplicationUrl", _configService.ApplicationUrl);
-            environmentVariables.Add("Prowlarr_Health_Issue_Level", Enum.GetName(typeof(HealthCheckResult), healthCheck.Type));
-            environmentVariables.Add("Prowlarr_Health_Issue_Message", healthCheck.Message);
-            environmentVariables.Add("Prowlarr_Health_Issue_Type", healthCheck.Source.Name);
-            environmentVariables.Add("Prowlarr_Health_Issue_Wiki", healthCheck.WikiUrl.ToString() ?? string.Empty);
+            environmentVariables.Add("Fetcharr_EventType", "HealthIssue");
+            environmentVariables.Add("Fetcharr_InstanceName", _configFileProvider.InstanceName);
+            environmentVariables.Add("Fetcharr_ApplicationUrl", _configService.ApplicationUrl);
+            environmentVariables.Add("Fetcharr_Health_Issue_Level", Enum.GetName(typeof(HealthCheckResult), healthCheck.Type));
+            environmentVariables.Add("Fetcharr_Health_Issue_Message", healthCheck.Message);
+            environmentVariables.Add("Fetcharr_Health_Issue_Type", healthCheck.Source.Name);
+            environmentVariables.Add("Fetcharr_Health_Issue_Wiki", healthCheck.WikiUrl.ToString() ?? string.Empty);
 
             ExecuteScript(environmentVariables);
         }
@@ -59,13 +59,13 @@ namespace NzbDrone.Core.Notifications.CustomScript
         {
             var environmentVariables = new StringDictionary();
 
-            environmentVariables.Add("Prowlarr_EventType", "HealthRestored");
-            environmentVariables.Add("Prowlarr_InstanceName", _configFileProvider.InstanceName);
-            environmentVariables.Add("Prowlarr_ApplicationUrl", _configService.ApplicationUrl);
-            environmentVariables.Add("Prowlarr_Health_Restored_Level", Enum.GetName(typeof(HealthCheckResult), previousCheck.Type));
-            environmentVariables.Add("Prowlarr_Health_Restored_Message", previousCheck.Message);
-            environmentVariables.Add("Prowlarr_Health_Restored_Type", previousCheck.Source.Name);
-            environmentVariables.Add("Prowlarr_Health_Restored_Wiki", previousCheck.WikiUrl.ToString() ?? string.Empty);
+            environmentVariables.Add("Fetcharr_EventType", "HealthRestored");
+            environmentVariables.Add("Fetcharr_InstanceName", _configFileProvider.InstanceName);
+            environmentVariables.Add("Fetcharr_ApplicationUrl", _configService.ApplicationUrl);
+            environmentVariables.Add("Fetcharr_Health_Restored_Level", Enum.GetName(typeof(HealthCheckResult), previousCheck.Type));
+            environmentVariables.Add("Fetcharr_Health_Restored_Message", previousCheck.Message);
+            environmentVariables.Add("Fetcharr_Health_Restored_Type", previousCheck.Source.Name);
+            environmentVariables.Add("Fetcharr_Health_Restored_Wiki", previousCheck.WikiUrl.ToString() ?? string.Empty);
 
             ExecuteScript(environmentVariables);
         }
@@ -74,12 +74,12 @@ namespace NzbDrone.Core.Notifications.CustomScript
         {
             var environmentVariables = new StringDictionary();
 
-            environmentVariables.Add("Prowlarr_EventType", "ApplicationUpdate");
-            environmentVariables.Add("Prowlarr_InstanceName", _configFileProvider.InstanceName);
-            environmentVariables.Add("Prowlarr_ApplicationUrl", _configService.ApplicationUrl);
-            environmentVariables.Add("Prowlarr_Update_Message", updateMessage.Message);
-            environmentVariables.Add("Prowlarr_Update_NewVersion", updateMessage.NewVersion.ToString());
-            environmentVariables.Add("Prowlarr_Update_PreviousVersion", updateMessage.PreviousVersion.ToString());
+            environmentVariables.Add("Fetcharr_EventType", "ApplicationUpdate");
+            environmentVariables.Add("Fetcharr_InstanceName", _configFileProvider.InstanceName);
+            environmentVariables.Add("Fetcharr_ApplicationUrl", _configService.ApplicationUrl);
+            environmentVariables.Add("Fetcharr_Update_Message", updateMessage.Message);
+            environmentVariables.Add("Fetcharr_Update_NewVersion", updateMessage.NewVersion.ToString());
+            environmentVariables.Add("Fetcharr_Update_PreviousVersion", updateMessage.PreviousVersion.ToString());
 
             ExecuteScript(environmentVariables);
         }
@@ -98,9 +98,9 @@ namespace NzbDrone.Core.Notifications.CustomScript
                 try
                 {
                     var environmentVariables = new StringDictionary();
-                    environmentVariables.Add("Prowlarr_EventType", "Test");
-                    environmentVariables.Add("Prowlarr_InstanceName", _configFileProvider.InstanceName);
-                    environmentVariables.Add("Prowlarr_ApplicationUrl", _configService.ApplicationUrl);
+                    environmentVariables.Add("Fetcharr_EventType", "Test");
+                    environmentVariables.Add("Fetcharr_InstanceName", _configFileProvider.InstanceName);
+                    environmentVariables.Add("Fetcharr_ApplicationUrl", _configService.ApplicationUrl);
 
                     var processOutput = ExecuteScript(environmentVariables);
 

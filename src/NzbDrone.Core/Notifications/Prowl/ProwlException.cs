@@ -1,16 +1,16 @@
 using System;
 using NzbDrone.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Prowl
+namespace NzbDrone.Core.Notifications.Fetch
 {
-    public class ProwlException : NzbDroneException
+    public class FetchException : NzbDroneException
     {
-        public ProwlException(string message)
+        public FetchException(string message)
             : base(message)
         {
         }
 
-        public ProwlException(string message, Exception innerException, params object[] args)
+        public FetchException(string message, Exception innerException, params object[] args)
             : base(message, innerException, args)
         {
         }

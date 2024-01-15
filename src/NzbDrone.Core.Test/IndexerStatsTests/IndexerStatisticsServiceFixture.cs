@@ -38,7 +38,7 @@ namespace NzbDrone.Core.Test.IndexerStatsTests
                     Successful = false,
                     Id = 8,
                     IndexerId = 5,
-                    Data = new Dictionary<string, string> { { "source", "prowlarr" } }
+                    Data = new Dictionary<string, string> { { "source", "fetcharr" } }
                 }
             };
 

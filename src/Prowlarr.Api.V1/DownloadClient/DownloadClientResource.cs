@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using NzbDrone.Core.Download;
 using NzbDrone.Core.Indexers;
 
-namespace Prowlarr.Api.V1.DownloadClient
+namespace Fetcharr.Api.V1.DownloadClient
 {
     public class DownloadClientResource : ProviderResource<DownloadClientResource>
     {

@@ -64,7 +64,7 @@ function PageHeaderActionsMenu(props) {
           {
             formsAuth &&
               <MenuItem
-                to={`${window.Prowlarr.urlBase}/logout`}
+                to={`${window.Fetcharr.urlBase}/logout`}
                 noRouter={true}
               >
                 <Icon

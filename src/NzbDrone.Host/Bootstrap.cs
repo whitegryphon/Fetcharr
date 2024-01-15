@@ -24,7 +24,7 @@ using NzbDrone.Common.Instrumentation;
 using NzbDrone.Common.Instrumentation.Extensions;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Datastore.Extensions;
-using Prowlarr.Http.ClientSchema;
+using Fetcharr.Http.ClientSchema;
 using PostgresOptions = NzbDrone.Core.Datastore.PostgresOptions;
 
 namespace NzbDrone.Host
@@ -35,18 +35,18 @@ namespace NzbDrone.Host
 
         public static readonly List<string> ASSEMBLIES = new List<string>
         {
-            "Prowlarr.Host",
-            "Prowlarr.Core",
-            "Prowlarr.SignalR",
-            "Prowlarr.Api.V1",
-            "Prowlarr.Http"
+            "Fetcharr.Host",
+            "Fetcharr.Core",
+            "Fetcharr.SignalR",
+            "Fetcharr.Api.V1",
+            "Fetcharr.Http"
         };
 
         public static void Start(string[] args, Action<IHostBuilder> trayCallback = null)
         {
             try
             {
-                Logger.Info("Starting Prowlarr - {0} - Version {1}",
+                Logger.Info("Starting Fetcharr - {0} - Version {1}",
                             Environment.ProcessPath,
                             Assembly.GetExecutingAssembly().GetName().Version);
 
@@ -97,7 +97,7 @@ namespace NzbDrone.Host
                             })
                             .ConfigureServices(services =>
                             {
-                                services.Configure<PostgresOptions>(config.GetSection("Prowlarr:Postgres"));
+                                services.Configure<PostgresOptions>(config.GetSection("Fetcharr:Postgres"));
                             }).Build();
 
                         break;
@@ -106,7 +106,7 @@ namespace NzbDrone.Host
             }
             catch (InvalidConfigFileException ex)
             {
-                throw new ProwlarrStartupException(ex);
+                throw new FetcharrStartupException(ex);
             }
             catch (TerminateApplicationException e)
             {
@@ -153,7 +153,7 @@ namespace NzbDrone.Host
                 })
                 .ConfigureServices(services =>
                 {
-                    services.Configure<PostgresOptions>(config.GetSection("Prowlarr:Postgres"));
+                    services.Configure<PostgresOptions>(config.GetSection("Fetcharr:Postgres"));
                     services.Configure<FormOptions>(x =>
                     {
                         //Double the default multipart body length from 128 MB to 256 MB
@@ -241,7 +241,7 @@ namespace NzbDrone.Host
             {
                 Logger.Error(ex, ex.Message);
 
-                throw new InvalidConfigFileException($"{configPath} is corrupt or invalid. Please delete the config file and Prowlarr will recreate it.", ex);
+                throw new InvalidConfigFileException($"{configPath} is corrupt or invalid. Please delete the config file and Fetcharr will recreate it.", ex);
             }
         }
 
@@ -262,11 +262,11 @@ namespace NzbDrone.Host
             {
                 if (ex.HResult == 0x2 || ex.HResult == 0x2006D080)
                 {
-                    throw new ProwlarrStartupException(ex,
+                    throw new FetcharrStartupException(ex,
                         $"The SSL certificate file {cert} does not exist");
                 }
 
-                throw new ProwlarrStartupException(ex);
+                throw new FetcharrStartupException(ex);
             }
 
             return certificate;

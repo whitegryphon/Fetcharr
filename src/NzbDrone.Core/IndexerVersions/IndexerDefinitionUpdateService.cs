@@ -88,7 +88,7 @@ namespace NzbDrone.Core.IndexerVersions
                 // Grab latest def list from server or fallback to disk
                 try
                 {
-                    var request = new HttpRequest($"https://indexers.prowlarr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}");
+                    var request = new HttpRequest($"https://indexers.fetcharr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}");
                     var response = _httpClient.Get<List<CardigannMetaDefinition>>(request);
                     indexerList = response.Resource.Where(i => !_definitionBlocklist.Contains(i.File)).ToList();
                 }
@@ -217,7 +217,7 @@ namespace NzbDrone.Core.IndexerVersions
 
         private CardigannDefinition GetHttpDefinition(string id)
         {
-            var req = new HttpRequest($"https://indexers.prowlarr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}/{id}");
+            var req = new HttpRequest($"https://indexers.fetcharr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}/{id}");
             var response = _httpClient.Get(req);
             var definition = _deserializer.Deserialize<CardigannDefinition>(response.Content);
             return CleanIndexerDefinition(definition);
@@ -291,7 +291,7 @@ namespace NzbDrone.Core.IndexerVersions
                 var definitionsFolder = Path.Combine(startupFolder, "Definitions");
                 var saveFile = Path.Combine(definitionsFolder, $"indexers.zip");
 
-                _httpClient.DownloadFile($"https://indexers.prowlarr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}/package.zip", saveFile);
+                _httpClient.DownloadFile($"https://indexers.fetcharr.com/{DEFINITION_BRANCH}/{DEFINITION_VERSION}/package.zip", saveFile);
 
                 using (var archive = ZipFile.OpenRead(saveFile))
                 {

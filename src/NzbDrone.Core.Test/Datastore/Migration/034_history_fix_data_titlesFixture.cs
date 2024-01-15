@@ -30,7 +30,7 @@ namespace NzbDrone.Core.Test.Datastore.Migration
                         Genre = "",
                         Query = "",
                         QueryType = "book",
-                        Source = "Prowlarr",
+                        Source = "Fetcharr",
                         Host = "localhost"
                     }.ToJson(),
                     EventType = 2,
@@ -60,7 +60,7 @@ namespace NzbDrone.Core.Test.Datastore.Migration
                     {
                         GrabMethod = "Proxy",
                         Title = "Fake Release Title",
-                        Source = "Prowlarr",
+                        Source = "Fetcharr",
                         Host = "localhost"
                     }.ToJson(),
                     EventType = 1,

@@ -2,9 +2,9 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     [V1ApiController("config/development")]
     public class DevelopmentConfigController : ConfigController<DevelopmentConfigResource>

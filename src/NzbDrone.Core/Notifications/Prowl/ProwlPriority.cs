@@ -1,6 +1,6 @@
-namespace NzbDrone.Core.Notifications.Prowl
+namespace NzbDrone.Core.Notifications.Fetch
 {
-    public enum ProwlPriority
+    public enum FetchPriority
     {
         VeryLow = -2,
         Low = -1,

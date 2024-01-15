@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Localization
+namespace Fetcharr.Api.V1.Localization
 {
     public class LocalizationResource : RestResource
     {

@@ -1,4 +1,4 @@
-﻿namespace Prowlarr.Http.Authentication
+﻿namespace Fetcharr.Http.Authentication
 {
     public class LoginResource
     {

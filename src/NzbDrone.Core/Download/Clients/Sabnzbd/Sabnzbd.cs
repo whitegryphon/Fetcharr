@@ -193,7 +193,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
                     return new NzbDroneValidationFailure("Version", "SABnzbd develop version, assuming version 1.1.0 or higher.")
                     {
                         IsWarning = true,
-                        DetailedDescription = "Prowlarr may not be able to support new features added to SABnzbd when running develop versions."
+                        DetailedDescription = "Fetcharr may not be able to support new features added to SABnzbd when running develop versions."
                     };
                 }
 
@@ -251,7 +251,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
                 return new NzbDroneValidationFailure("", "Disable 'Check before download' option in SABnzbd")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/switches/"),
-                    DetailedDescription = "Using Check before download affects Prowlarr ability to track new downloads. Also SABnzbd recommends 'Abort jobs that cannot be completed' instead since it's more effective."
+                    DetailedDescription = "Using Check before download affects Fetcharr ability to track new downloads. Also SABnzbd recommends 'Abort jobs that cannot be completed' instead since it's more effective."
                 };
             }
 
@@ -289,7 +289,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
                 return new NzbDroneValidationFailure("Category", "Disable TV Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
-                    DetailedDescription = "You must disable SABnzbd TV Sorting for the category Prowlarr uses to prevent import issues. Go to SABnzbd to fix it."
+                    DetailedDescription = "You must disable SABnzbd TV Sorting for the category Fetcharr uses to prevent import issues. Go to SABnzbd to fix it."
                 };
             }
 
@@ -298,7 +298,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
                 return new NzbDroneValidationFailure("Category", "Disable Movie Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
-                    DetailedDescription = "You must disable SABnzbd Movie Sorting for the category Prowlarr uses to prevent import issues. Go to SABnzbd to fix it."
+                    DetailedDescription = "You must disable SABnzbd Movie Sorting for the category Fetcharr uses to prevent import issues. Go to SABnzbd to fix it."
                 };
             }
 
@@ -307,7 +307,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
                 return new NzbDroneValidationFailure("Category", "Disable Date Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
-                    DetailedDescription = "You must disable SABnzbd Date Sorting for the category Prowlarr uses to prevent import issues. Go to SABnzbd to fix it."
+                    DetailedDescription = "You must disable SABnzbd Date Sorting for the category Fetcharr uses to prevent import issues. Go to SABnzbd to fix it."
                 };
             }
 

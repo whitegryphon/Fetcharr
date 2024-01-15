@@ -11,7 +11,7 @@ namespace NzbDrone.Core.Applications.Radarr
         public RadarrSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).IsValidUrl();
-            RuleFor(c => c.ProwlarrUrl).IsValidUrl();
+            RuleFor(c => c.FetcharrUrl).IsValidUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
             RuleFor(c => c.SyncCategories).NotEmpty();
         }
@@ -23,13 +23,13 @@ namespace NzbDrone.Core.Applications.Radarr
 
         public RadarrSettings()
         {
-            ProwlarrUrl = "http://localhost:9696";
+            FetcharrUrl = "http://localhost:9696";
             BaseUrl = "http://localhost:7878";
             SyncCategories = new[] { 2000, 2010, 2020, 2030, 2040, 2045, 2050, 2060, 2070, 2080, 2090 };
         }
 
-        [FieldDefinition(0, Label = "Prowlarr Server", HelpText = "Prowlarr server URL as Radarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
-        public string ProwlarrUrl { get; set; }
+        [FieldDefinition(0, Label = "Fetcharr Server", HelpText = "Fetcharr server URL as Radarr sees it, including http(s)://, port, and urlbase if needed", Placeholder = "http://localhost:9696")]
+        public string FetcharrUrl { get; set; }
 
         [FieldDefinition(1, Label = "Radarr Server", HelpText = "URL used to connect to Radarr server, including http(s)://, port, and urlbase if required", Placeholder = "http://localhost:7878")]
         public string BaseUrl { get; set; }

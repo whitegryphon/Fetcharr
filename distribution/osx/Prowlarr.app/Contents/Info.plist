@@ -11,15 +11,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Prowlarr</string>
+	<string>Fetcharr</string>
 	<key>CFBundleIconFile</key>
-	<string>prowlarr.icns</string>
+	<string>fetcharr.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.osx.prowlarr.com</string>
+	<string>com.osx.fetcharr.com</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Prowlarr</string>
+	<string>Fetcharr</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

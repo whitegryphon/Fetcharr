@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Cache;
 using NzbDrone.Core.Configuration;
-using Prowlarr.Http.Ping;
+using Fetcharr.Http.Ping;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class PingController : Controller
     {

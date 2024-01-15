@@ -15,11 +15,11 @@ using NzbDrone.Core.Indexers;
 using NzbDrone.Core.IndexerSearch;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Validation;
-using Prowlarr.Http;
-using Prowlarr.Http.Extensions;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.Extensions;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Search
+namespace Fetcharr.Api.V1.Search
 {
     [V1ApiController]
     public class SearchController : RestController<ReleaseResource>
@@ -159,7 +159,7 @@ namespace Prowlarr.Api.V1.Search
                 {
                     q = payload.Query,
                     t = payload.Type,
-                    source = "Prowlarr",
+                    source = "Fetcharr",
                     cat = string.Join(",", payload.Categories),
                     server = Request.GetServerUrl(),
                     host = Request.GetHostName(),

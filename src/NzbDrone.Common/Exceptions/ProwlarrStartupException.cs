@@ -2,35 +2,35 @@ using System;
 
 namespace NzbDrone.Common.Exceptions
 {
-    public class ProwlarrStartupException : NzbDroneException
+    public class FetcharrStartupException : NzbDroneException
     {
-        public ProwlarrStartupException(string message, params object[] args)
-            : base("Prowlarr failed to start: " + string.Format(message, args))
+        public FetcharrStartupException(string message, params object[] args)
+            : base("Fetcharr failed to start: " + string.Format(message, args))
         {
         }
 
-        public ProwlarrStartupException(string message)
-            : base("Prowlarr failed to start: " + message)
+        public FetcharrStartupException(string message)
+            : base("Fetcharr failed to start: " + message)
         {
         }
 
-        public ProwlarrStartupException()
-            : base("Prowlarr failed to start")
+        public FetcharrStartupException()
+            : base("Fetcharr failed to start")
         {
         }
 
-        public ProwlarrStartupException(Exception innerException, string message, params object[] args)
-            : base("Prowlarr failed to start: " + string.Format(message, args), innerException)
+        public FetcharrStartupException(Exception innerException, string message, params object[] args)
+            : base("Fetcharr failed to start: " + string.Format(message, args), innerException)
         {
         }
 
-        public ProwlarrStartupException(Exception innerException, string message)
-            : base("Prowlarr failed to start: " + message, innerException)
+        public FetcharrStartupException(Exception innerException, string message)
+            : base("Fetcharr failed to start: " + message, innerException)
         {
         }
 
-        public ProwlarrStartupException(Exception innerException)
-            : base("Prowlarr failed to start: " + innerException.Message)
+        public FetcharrStartupException(Exception innerException)
+            : base("Fetcharr failed to start: " + innerException.Message)
         {
         }
     }

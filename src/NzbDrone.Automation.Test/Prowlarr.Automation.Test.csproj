@@ -7,6 +7,6 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="99.0.4844.5100" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Test.Common\Prowlarr.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Fetcharr.Test.Common.csproj" />
   </ItemGroup>
 </Project>

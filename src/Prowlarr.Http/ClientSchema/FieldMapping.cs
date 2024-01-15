@@ -1,6 +1,6 @@
 using System;
 
-namespace Prowlarr.Http.ClientSchema
+namespace Fetcharr.Http.ClientSchema
 {
     public class FieldMapping
     {

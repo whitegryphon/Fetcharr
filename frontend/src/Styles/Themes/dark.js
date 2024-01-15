@@ -1,4 +1,4 @@
-const prowlarrOrange = '#e66000';
+const fetcharrOrange = '#e66000';
 
 module.exports = {
   textColor: '#ccc',
@@ -14,17 +14,17 @@ module.exports = {
   warningColor: '#ffa500',
   infoColor: '#5d9cec',
   purple: '#7a43b6',
-  prowlarrOrange,
+  fetcharrOrange,
   helpTextColor: '#909293',
   darkGray: '#888',
   gray: '#adadad',
 
   // Theme Colors
 
-  themeBlue: prowlarrOrange,
+  themeBlue: fetcharrOrange,
   themeRed: '#c4273c',
   themeDarkColor: '#595959',
-  themeLightColor: prowlarrOrange,
+  themeLightColor: fetcharrOrange,
   pageBackground: '#202020',
   pageFooterBackgroud: 'rgba(0, 0, 0, .25)',
 
@@ -33,7 +33,7 @@ module.exports = {
 
   // Labels
   inverseLabelColor: '#ddd',
-  inverseLabelTextColor: prowlarrOrange,
+  inverseLabelTextColor: fetcharrOrange,
 
   // Links
   defaultLinkHoverColor: '#fff',

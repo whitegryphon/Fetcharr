@@ -5,10 +5,10 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.Tags;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Tags
+namespace Fetcharr.Api.V1.Tags
 {
     [V1ApiController]
     public class TagController : RestControllerWithSignalR<TagResource, Tag>, IHandle<TagsUpdatedEvent>

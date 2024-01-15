@@ -2,9 +2,9 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.Serializer;
-using Prowlarr.Http.Exceptions;
+using Fetcharr.Http.Exceptions;
 
-namespace Prowlarr.Http.ErrorManagement
+namespace Fetcharr.Http.ErrorManagement
 {
     public class ErrorModel
     {

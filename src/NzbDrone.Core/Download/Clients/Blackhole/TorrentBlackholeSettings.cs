@@ -27,7 +27,7 @@ namespace NzbDrone.Core.Download.Clients.Blackhole
 
         private static readonly TorrentBlackholeSettingsValidator Validator = new TorrentBlackholeSettingsValidator();
 
-        [FieldDefinition(0, Label = "Torrent Folder", Type = FieldType.Path, HelpText = "Folder in which Prowlarr will store the .torrent file")]
+        [FieldDefinition(0, Label = "Torrent Folder", Type = FieldType.Path, HelpText = "Folder in which Fetcharr will store the .torrent file")]
         public string TorrentFolder { get; set; }
 
         [DefaultValue(false)]

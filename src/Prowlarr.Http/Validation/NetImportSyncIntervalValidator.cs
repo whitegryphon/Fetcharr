@@ -1,6 +1,6 @@
 using FluentValidation.Validators;
 
-namespace Prowlarr.Http.Validation
+namespace Fetcharr.Http.Validation
 {
     public class ImportListSyncIntervalValidator : PropertyValidator
     {

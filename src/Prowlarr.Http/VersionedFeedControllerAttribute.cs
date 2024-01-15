@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc.Routing;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class VersionedFeedControllerAttribute : Attribute, IRouteTemplateProvider
     {

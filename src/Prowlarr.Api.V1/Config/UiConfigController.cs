@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Localization;
 using NzbDrone.Http.REST.Attributes;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     [V1ApiController("config/ui")]
     public class UiConfigController : ConfigController<UiConfigResource>

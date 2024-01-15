@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Prowlarr.Http
+namespace Fetcharr.Http
 {
     public class ApiInfoController : Controller
     {

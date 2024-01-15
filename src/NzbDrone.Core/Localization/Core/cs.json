@@ -397,7 +397,7 @@
     "EditIndexerProxyImplementation": "Přidat indexátor - {implementationName}",
     "AuthBasic": "Základní (vyskakovací okno prohlížeče)",
     "AuthenticationRequiredWarning": "Aby se zabránilo vzdálenému přístupu bez ověření, vyžaduje nyní {appName} povolení ověření. Ověřování z místních adres můžete volitelně zakázat.",
-    "RestartProwlarr": "Restartujte {appName}",
+    "RestartFetcharr": "Restartujte {appName}",
     "Duration": "Trvání",
     "EditSelectedDownloadClients": "Upravit vybrané klienty pro stahování",
     "EditSelectedIndexers": "Upravit vybrané indexery",

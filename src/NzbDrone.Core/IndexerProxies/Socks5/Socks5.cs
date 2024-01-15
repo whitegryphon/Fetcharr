@@ -9,7 +9,7 @@ namespace NzbDrone.Core.IndexerProxies.Socks5
 {
     public class Socks5 : HttpIndexerProxyBase<Socks5Settings>
     {
-        public Socks5(IProwlarrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
+        public Socks5(IFetcharrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
             : base(cloudRequestBuilder, httpClient, logger, localizationService)
         {
         }

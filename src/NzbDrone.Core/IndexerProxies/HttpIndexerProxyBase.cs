@@ -18,7 +18,7 @@ namespace NzbDrone.Core.IndexerProxies
         protected readonly Logger _logger;
         protected readonly ILocalizationService _localizationService;
 
-        public HttpIndexerProxyBase(IProwlarrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
+        public HttpIndexerProxyBase(IFetcharrCloudRequestBuilder cloudRequestBuilder, IHttpClient httpClient, Logger logger, ILocalizationService localizationService)
         {
             _httpClient = httpClient;
             _logger = logger;

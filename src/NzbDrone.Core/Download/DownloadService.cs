@@ -75,7 +75,7 @@ namespace NzbDrone.Core.Download
                 DownloadClientName = downloadClient.Definition.Name,
                 Redirect = redirect,
                 Indexer = indexer,
-                GrabTrigger = source == "Prowlarr" ? GrabTrigger.Manual : GrabTrigger.Api
+                GrabTrigger = source == "Fetcharr" ? GrabTrigger.Manual : GrabTrigger.Api
             };
 
             string downloadClientId;
@@ -154,7 +154,7 @@ namespace NzbDrone.Core.Download
             var grabEvent = new IndexerDownloadEvent(release, success, source, host, release.Title, release.DownloadUrl)
             {
                 Indexer = indexer,
-                GrabTrigger = source == "Prowlarr" ? GrabTrigger.Manual : GrabTrigger.Api
+                GrabTrigger = source == "Fetcharr" ? GrabTrigger.Manual : GrabTrigger.Api
             };
 
             try
@@ -207,7 +207,7 @@ namespace NzbDrone.Core.Download
             {
                 Redirect = true,
                 Indexer = indexer,
-                GrabTrigger = source == "Prowlarr" ? GrabTrigger.Manual : GrabTrigger.Api
+                GrabTrigger = source == "Fetcharr" ? GrabTrigger.Manual : GrabTrigger.Api
             };
 
             _eventAggregator.PublishEvent(grabEvent);

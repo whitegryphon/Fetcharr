@@ -5,10 +5,10 @@ using NzbDrone.Core.Datastore.Events;
 using NzbDrone.Core.HealthCheck;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.SignalR;
-using Prowlarr.Http;
-using Prowlarr.Http.REST;
+using Fetcharr.Http;
+using Fetcharr.Http.REST;
 
-namespace Prowlarr.Api.V1.Health
+namespace Fetcharr.Api.V1.Health
 {
     [V1ApiController]
     public class HealthController : RestControllerWithSignalR<HealthResource, HealthCheck>,

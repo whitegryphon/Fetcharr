@@ -1,5 +1,5 @@
 <Project>
-  <!-- Common to all Prowlarr Projects -->
+  <!-- Common to all Fetcharr Projects -->
   <PropertyGroup>
     <AnalysisLevel>6.0-all</AnalysisLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -10,22 +10,22 @@
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <RuntimeIdentifiers>win-x64;win-x86;osx-x64;osx-arm64;linux-x64;linux-musl-x64;linux-musl-arm;linux-arm;linux-arm64;linux-musl-arm64</RuntimeIdentifiers>
 
-    <ProwlarrRootDir>$(MSBuildThisFileDirectory)..\</ProwlarrRootDir>
+    <FetcharrRootDir>$(MSBuildThisFileDirectory)..\</FetcharrRootDir>
 
     <!-- Specifies the type of output -->
-    <ProwlarrOutputType>Library</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="'$(MSBuildProjectName)'=='Prowlarr'">Exe</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="'$(MSBuildProjectName)'=='Prowlarr.Console'">Exe</ProwlarrOutputType>
-    <ProwlarrOutputType Condition="'$(MSBuildProjectName)'=='Prowlarr.Update'">Update</ProwlarrOutputType>
+    <FetcharrOutputType>Library</FetcharrOutputType>
+    <FetcharrOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</FetcharrOutputType>
+    <FetcharrOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</FetcharrOutputType>
+    <FetcharrOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</FetcharrOutputType>
+    <FetcharrOutputType Condition="'$(MSBuildProjectName)'=='Fetcharr'">Exe</FetcharrOutputType>
+    <FetcharrOutputType Condition="'$(MSBuildProjectName)'=='Fetcharr.Console'">Exe</FetcharrOutputType>
+    <FetcharrOutputType Condition="'$(MSBuildProjectName)'=='Fetcharr.Update'">Update</FetcharrOutputType>
 
     <!-- Specifies whether it's one of our own libraries -->
-    <ProwlarrProject>false</ProwlarrProject>
-    <ProwlarrProject Condition="$(MSBuildProjectName.StartsWith('Prowlarr'))">true</ProwlarrProject>
-    <ProwlarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</ProwlarrProject>
-    <ProwlarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</ProwlarrProject>
+    <FetcharrProject>false</FetcharrProject>
+    <FetcharrProject Condition="$(MSBuildProjectName.StartsWith('Fetcharr'))">true</FetcharrProject>
+    <FetcharrProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</FetcharrProject>
+    <FetcharrProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</FetcharrProject>
 
     <!-- A test project gets the test sdk packages automatically added -->
     <TestProject>false</TestProject>
@@ -42,14 +42,14 @@
   <PropertyGroup>
     <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
     <!-- Centralize intermediate and default outputs -->
-    <BaseIntermediateOutputPath>$(ProwlarrRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(ProwlarrRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
-    <OutputPath>$(ProwlarrRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+    <BaseIntermediateOutputPath>$(FetcharrRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(FetcharrRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
+    <OutputPath>$(FetcharrRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
 
     <!-- Output to _output and _tests respectively -->
-    <OutputPath Condition="'$(ProwlarrProject)'=='true'">$(ProwlarrRootDir)_output\</OutputPath>
-    <OutputPath Condition="'$(ProwlarrOutputType)'=='Test'">$(ProwlarrRootDir)_tests\</OutputPath>
-    <OutputPath Condition="'$(ProwlarrOutputType)'=='Update'">$(ProwlarrRootDir)_output\Prowlarr.Update\</OutputPath>
+    <OutputPath Condition="'$(FetcharrProject)'=='true'">$(FetcharrRootDir)_output\</OutputPath>
+    <OutputPath Condition="'$(FetcharrOutputType)'=='Test'">$(FetcharrRootDir)_tests\</OutputPath>
+    <OutputPath Condition="'$(FetcharrOutputType)'=='Update'">$(FetcharrRootDir)_output\Fetcharr.Update\</OutputPath>
 
     <!-- Paths relative to project file for better readability -->
     <EnableBaseIntermediateOutputPathMismatchWarning>false</EnableBaseIntermediateOutputPathMismatchWarning>
@@ -61,17 +61,17 @@
   </PropertyGroup>
 
   <!-- Test projects need bindingRedirects -->
-  <PropertyGroup Condition="'$(ProwlarrOutputType)'=='Test'">
+  <PropertyGroup Condition="'$(FetcharrOutputType)'=='Test'">
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <SelfContained>false</SelfContained>
   </PropertyGroup>
 
   <!-- Set the Product and Version info for our own projects -->
-  <PropertyGroup Condition="'$(ProwlarrProject)'=='true'">
-    <Product>Prowlarr</Product>
-    <Company>prowlarr.com</Company>
-    <Copyright>Copyright 2014-$([System.DateTime]::Now.ToString('yyyy')) prowlarr.com (GNU General Public v3)</Copyright>
+  <PropertyGroup Condition="'$(FetcharrProject)'=='true'">
+    <Product>Fetcharr</Product>
+    <Company>fetcharr.com</Company>
+    <Copyright>Copyright 2014-$([System.DateTime]::Now.ToString('yyyy')) fetcharr.com (GNU General Public v3)</Copyright>
 
     <!-- Should be replaced by CI -->
     <AssemblyVersion>10.0.0.*</AssemblyVersion>
@@ -88,7 +88,7 @@
   </PropertyGroup>
 
   <!-- Set the AssemblyConfiguration attribute for projects -->
-  <ItemGroup Condition="'$(ProwlarrProject)'=='true'">
+  <ItemGroup Condition="'$(FetcharrProject)'=='true'">
     <AssemblyAttribute Include="System.Reflection.AssemblyConfigurationAttribute">
       <_Parameter1>$(AssemblyConfiguration)</_Parameter1>
     </AssemblyAttribute>
@@ -96,10 +96,10 @@
 
   <PropertyGroup>
     <!-- For now keep the NzbDrone namespace -->
-    <RootNamespace Condition="'$(ProwlarrProject)'=='true'">$(MSBuildProjectName.Replace('Prowlarr','NzbDrone'))</RootNamespace>
+    <RootNamespace Condition="'$(FetcharrProject)'=='true'">$(MSBuildProjectName.Replace('Fetcharr','NzbDrone'))</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(ProwlarrProject)'=='true' and '$(EnableAnalyzers)'=='false'">
+  <PropertyGroup Condition="'$(FetcharrProject)'=='true' and '$(EnableAnalyzers)'=='false'">
     <!-- FXCop Built into Net5 SDK now as NETAnalyzers, Enabled by default on net5 projects -->
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
   </PropertyGroup>
@@ -114,7 +114,7 @@
   </ItemGroup>
 
   <!-- Set up stylecop -->
-  <ItemGroup Condition="'$(ProwlarrProject)'=='true' and '$(EnableAnalyzers)'!='false'">
+  <ItemGroup Condition="'$(FetcharrProject)'=='true' and '$(EnableAnalyzers)'!='false'">
     <!-- StyleCop analysis -->
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>

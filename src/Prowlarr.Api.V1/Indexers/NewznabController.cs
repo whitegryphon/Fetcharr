@@ -18,8 +18,8 @@ using NzbDrone.Core.Indexers;
 using NzbDrone.Core.IndexerSearch;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.ThingiProvider.Status;
-using Prowlarr.Http.Extensions;
-using Prowlarr.Http.REST;
+using Fetcharr.Http.Extensions;
+using Fetcharr.Http.REST;
 using BadRequestException = NzbDrone.Core.Exceptions.BadRequestException;
 
 namespace NzbDrone.Api.V1.Indexers
@@ -121,8 +121,8 @@ namespace NzbDrone.Api.V1.Indexers
                                 new ()
                                 {
                                     Title = "Test Release",
-                                    Guid = "https://prowlarr.com",
-                                    DownloadUrl = "https://prowlarr.com",
+                                    Guid = "https://fetcharr.com",
+                                    DownloadUrl = "https://fetcharr.com",
                                     PublishDate = DateTime.Now
                                 }
                             }
@@ -245,7 +245,7 @@ namespace NzbDrone.Api.V1.Indexers
 
             if (link.IsNullOrWhiteSpace() || file.IsNullOrWhiteSpace())
             {
-                throw new BadRequestException("Invalid Prowlarr link");
+                throw new BadRequestException("Invalid Fetcharr link");
             }
 
             file = WebUtility.UrlDecode(file);

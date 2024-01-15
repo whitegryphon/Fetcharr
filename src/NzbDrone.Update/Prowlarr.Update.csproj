@@ -9,6 +9,6 @@
     <PackageReference Include="NLog" Version="5.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Prowlarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Fetcharr.Common.csproj" />
   </ItemGroup>
 </Project>

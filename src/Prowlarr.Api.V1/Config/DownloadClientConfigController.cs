@@ -1,7 +1,7 @@
 using NzbDrone.Core.Configuration;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Config
+namespace Fetcharr.Api.V1.Config
 {
     [V1ApiController("config/downloadclient")]
     public class DownloadClientConfigController : ConfigController<DownloadClientConfigResource>

@@ -698,22 +698,22 @@ namespace NzbDrone.Core.Indexers.Definitions
         [FieldDefinition(6, Label = "Exclude Hentai", Type = FieldType.Checkbox, HelpText = "Exclude Hentai torrents from results")]
         public bool ExcludeHentai { get; set; }
 
-        [FieldDefinition(7, Label = "Search By Year", Type = FieldType.Checkbox, HelpText = "Makes Prowlarr to search by year as a different argument in the request.")]
+        [FieldDefinition(7, Label = "Search By Year", Type = FieldType.Checkbox, HelpText = "Makes Fetcharr to search by year as a different argument in the request.")]
         public bool SearchByYear { get; set; }
 
-        [FieldDefinition(8, Label = "Enable Sonarr Compatibility", Type = FieldType.Checkbox, HelpText = "Makes Prowlarr try to add Season information into Release names, without this Sonarr can't match any Seasons, but it has a lot of false positives as well")]
+        [FieldDefinition(8, Label = "Enable Sonarr Compatibility", Type = FieldType.Checkbox, HelpText = "Makes Fetcharr try to add Season information into Release names, without this Sonarr can't match any Seasons, but it has a lot of false positives as well")]
         public bool EnableSonarrCompatibility { get; set; }
 
         [FieldDefinition(9, Label = "Use Filenames for Single Episodes", Type = FieldType.Checkbox, HelpText = "Add a release using the actual filename, this currently only works for single episode releases")]
         public bool UseFilenameForSingleEpisodes { get; set; }
 
-        [FieldDefinition(10, Label = "Add Japanese title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Prowlarr add Japanese titles as synonyms, i.e kanji/hiragana/katakana.")]
+        [FieldDefinition(10, Label = "Add Japanese title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Fetcharr add Japanese titles as synonyms, i.e kanji/hiragana/katakana.")]
         public bool AddJapaneseTitle { get; set; }
 
-        [FieldDefinition(11, Label = "Add Romaji title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Prowlarr add Romaji title as a synonym, i.e \"Shingeki no Kyojin\" with Attack on Titan")]
+        [FieldDefinition(11, Label = "Add Romaji title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Fetcharr add Romaji title as a synonym, i.e \"Shingeki no Kyojin\" with Attack on Titan")]
         public bool AddRomajiTitle { get; set; }
 
-        [FieldDefinition(12, Label = "Add alternative title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Prowlarr add alternative title as a synonym, i.e \"AoT\" with Attack on Titan, but also \"Attack on Titan Season 4\" Instead of \"Attack on Titan: The Final Season\"")]
+        [FieldDefinition(12, Label = "Add alternative title as a synonym", Type = FieldType.Checkbox, HelpText = "Makes Fetcharr add alternative title as a synonym, i.e \"AoT\" with Attack on Titan, but also \"Attack on Titan Season 4\" Instead of \"Attack on Titan: The Final Season\"")]
         public bool AddAlternativeTitle { get; set; }
 
         public override NzbDroneValidationResult Validate()

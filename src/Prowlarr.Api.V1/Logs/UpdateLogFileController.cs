@@ -6,9 +6,9 @@ using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Configuration;
-using Prowlarr.Http;
+using Fetcharr.Http;
 
-namespace Prowlarr.Api.V1.Logs
+namespace Fetcharr.Api.V1.Logs
 {
     [V1ApiController("log/file/update")]
     public class UpdateLogFileController : LogFileControllerBase
